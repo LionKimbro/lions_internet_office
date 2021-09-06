@@ -43,6 +43,8 @@ I'm setting up the directory tree like so:
 * `/`  -- the root directory for the project
    * `time/`  -- the root directory of most data, which is laid out by year of origin
        * `2021/` -- the root directory for this year
+          * `discussions/`  -- discussion summaries
+            * `yyyy-mm-dd.md`  -- a summary or notes on a discussion on or around a particular day
           * `usr/`  -- user-specific directory -- user folders will go in here
              * `lion/`  -- Lion's personal contributions directory (choosing myself for example)
                 * `img/`  -- images, named by any particular method
@@ -56,6 +58,8 @@ I'm setting up the directory tree like so:
 When you first use the repository, think up a simple name (all lower case, no spaces, no punctuation, basically: [a-z]+) and add a folder for yourself beneath `/time/2021/usr/` -- that will be your own folder.
 
 You can do anything that you like with your own folder, but I hope that you will place images beneath `img/`, and articles (or anything else intended to be represented with a web page) under `entries/`.
+
+Feel free also to edit the `discussions/yyyy-mm-dd.md` files, to take down notes for discussion on a particular day.
 
 My intention is that the paths to images and entries are considered "hard" rather than "soft" -- that we treat them as permanent unchanging immutable addresses.  Of course, they are not, and I think we should think that maybe in the future we might relocate them.  But for the time being at least, please consider them "hard" rather than "soft."
 
