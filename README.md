@@ -1,3 +1,4 @@
+
 # lions_internet_office
 Articles, Records, and Inspirations from and around Lion's Internet Office
 
@@ -10,14 +11,14 @@ We have a lot of interesting conversations in [Lion's Internet Office (on discor
 ## How It Is Intended to Work (Immediately)
 
 1. Hang out in Lion's Internet Office.
-   * preferably "#programming," or a related channel
+   * preferably `#programming`, or a related channel
 2. Ask for commit access to this repository.
-   * note: _I'm not sure how to give people commit access just yet, so I'll figure it out as we go._
+   * Make sure to tell me your github username.
    * Or fork the repository and issue a pull request.
 3. Check out the repository, add files to the appropriate locations, commit, and push.
    * Or use github's already-present always-present in-browser "add a file" capabilities.
 
-When you want to talk about an article that's in here, post comments in a sub-thread of the #programming channel (or whatever channel you find appropriate.)
+When you want to talk about an article that's in here, post comments in a sub-thread of the `#programming` channel (or whatever channel you find appropriate.)
 
 To be clear:  Discussion, commenting, and so on -- are intended for Discord, and not in the published articles.
 
@@ -41,25 +42,24 @@ The data organization is time based.  So the directory immediately after the roo
 I'm setting up the directory tree like so:
 
 * `/`  -- the root directory for the project
-   * `time/`  -- the root directory of most data, which is laid out by year of origin
-       * `2021/` -- the root directory for this year
-          * `discussions/`  -- discussion summaries
-            * `yyyy-mm-dd.md`  -- a summary or notes on a discussion on or around a particular day
-          * `usr/`  -- user-specific directory -- user folders will go in here
-             * `lion/`  -- Lion's personal contributions directory (choosing myself for example)
-                * `img/`  -- images, named by any particular method
-                   * `2021-09-05_image_name.png`  -- a particular image; note the date in the prefix
-                * `entries/`  -- any particular entries, intended for public consumption
-                   * `index.md` -- a Markdown file, an index of other files in the directory
-                   * `2021-09-05_article-name-here.md` -- a Markdown file; note the date in the prefix
-                * _user discretion_`/` -- any folder at the user's discretion
-                   * _user discretion_  -- any file at the user's discretion
+  * `2021/` -- the root directory for this year
+    * `discussions/`  -- discussion summaries
+      * `yyyy-mm-dd.md`  -- a summary or notes on a discussion on or around a particular day
+    * `users/`  -- user-specific directory -- user folders will go in here
+      * `lion/`  -- Lion's personal contributions directory (choosing myself for example)
+        * `images/`  -- images, named by any particular method
+          * `2021-09-05_image_name.png`  -- a particular image; note the date in the prefix
+        * `entries/`  -- any particular entries, intended for public consumption
+          * `index.md` -- a Markdown file, an index of other files in the directory
+          * `2021-09-05_article-name-here.md` -- a Markdown file; note the date in the prefix
+        * _user discretion_`/` -- any folder at the user's discretion
+          * _user discretion_  -- any file at the user's discretion
 
-When you first use the repository, think up a simple name (all lower case, no spaces, no punctuation, basically: [a-z]+) and add a folder for yourself beneath `/time/2021/usr/` -- that will be your own folder.
+When you first use the repository, think up a simple name (all lower case, no spaces, no punctuation, basically: `[a-z]+`) and add a folder for yourself beneath `/2021/users/` -- that will be your own folder.
 
-You can do anything that you like with your own folder, but I hope that you will place images beneath `img/`, and articles (or anything else intended to be represented with a web page) under `entries/`.
+You can do anything that you like with your own folder, but I hope that you will place images beneath `images/`, and articles (or anything else intended to be represented with a web page) under `entries/`.
 
-Feel free also to edit the `discussions/yyyy-mm-dd.md` files, to take down notes for discussion on a particular day.
+Feel free also to edit the `/2021/discussions/yyyy-mm-dd.md` files, to take down notes for discussion on a particular day.
 
 My intention is that the paths to images and entries are considered "hard" rather than "soft" -- that we treat them as permanent unchanging immutable addresses.  Of course, they are not, and I think we should think that maybe in the future we might relocate them.  But for the time being at least, please consider them "hard" rather than "soft."
 
