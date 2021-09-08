@@ -312,9 +312,7 @@ For each global variable, I keep track of:
 
 The data dictionary is, very importantly, not a comment within the code-base.  It can be referenced from a comment in the code base, but it is not a comment within the code-base.  There is too much information that needs to be communicated about a variable, to neatly fit within the code as written.
 
-Essentially, the strategy is to take the security rules out of the programming language, and into the mind of the programmer.
-
-My over-riding philosophical observation here is that when the programming language takes over the strictures, it very often makes more trouble than it prevents.  And when programmers have the illusion that "the language strictures are taking care of the problem," they often do not think about the things that they really *should* be thinking about, and thus make a mess of their programs.
+Essentially, the strategy is <a href="#discipline-in-the-mind">to take the security rules out of the programming language, and into the mind of the programmer.</a>
 
 
 ### <a name="probes">Probes > Tests</a>
