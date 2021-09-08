@@ -11,22 +11,22 @@ This is a highly situated philosophy.  It's not intended for "all time"; rather,
 Also, the intended audience for this document is people who have spent at 20 years programming, 10 years minimum, and ideally at least 30 years old.  For example, when I say that "abstraction-focused programmers recognize only three numbers: [0, 1, or infinity,](https://en.wikipedia.org/wiki/Zero_one_infinity_rule)" -- I'm not going explaining what that is for readers.
 
 ## <a name="principles">Principles</a>
-* "Big Picture" Principles
-  * Motorcycles, not Tanks
-  * Locate Power Density
-  * Write The Right Foundation
-  * Relentlessly Delete Preconceptions
-  * Make Machines, not Abstractions
-  * Keep Strictures in the Mind, not the Code
-  * Clear Ideas > "Code Reuse"
-  * Notation > Feature
+* ["Big Picture" Principles](#principles-big)
+  * [Motorcycles, not Tanks](#motorcycles)
+  * [Locate Power Density](#power-density)
+  * [Write The Right Foundation](foundation)
+  * [Relentlessly Delete Preconceptions](#delete-preconceptions)
+  * [Make Machines, not Abstractions](#machines)
+  * [Keep Strictures in the Mind, not the Code](#discipline-in-the-mind)
+  * [Clear Ideas > "Code Reuse"](#ideas)
+  * [Notation > Feature](#notation)
 
-* "Small Picture" Principles
-  * Global Variables > Parameters
-  * Probes > Tests
-  * Integration > Interface
-  * Let Promises Do Their Work
-  * Write It Yourself
+* ["Small Picture" Principles](#principles-small)
+  * [Global Variables > Parameters](#global-variables)
+  * [Probes > Tests](#probes)
+  * [Integration > Interface](#integration)
+  * [Let Promises Do Their Work](#promises)
+  * [Write It Yourself](#write-it-yourself)
 
 "Big Picture" principles are about the software architecture, the big picture about how you write code, are about the design of software and "what is programming, really?" type stuff.
 
