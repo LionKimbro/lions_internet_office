@@ -2,18 +2,18 @@
 Lion Kimbro
 2021-09-08
 
-## Context
+## <a name="context">Context</a>
 I've been advocating for "transparent" data systems (I'm just now making up that term) -- wherein the data used by one application is also routinely used by other applications as well -- whether or not the executables associated with that application are running or not.
 
 Ciprian Cracium and I have been talking about this in [Lion's Internet Office on Discord](https://discord.gg/V8wDBh8d), and [Ciprian brought up the idea of using such with an outliner or tree organizer tool.](https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/6697ebb3.html)
 
 The subject came up:  "If there's a program that's actively making use of the data, how does it get notified of changes from other programs?"
 
-## Advocacy: Unique Change Files
+## <a name="changefiles">Advocacy: Unique Change Files</a>
 
 In this article, I advocate for a specific mechanism:  Have a directory where change notifications are posted to, and then the program actively using the data scans that directory for changes that it is interested in.
 
-### File Format
+### <a name="fileformat">File Format</a>
 
 The file would look something like so:
 
@@ -28,7 +28,7 @@ In the example here, there are two things notified:
 
 It's not critical that all information about the update is provided -- whether it's a delete, an update, an addition, whatever -- it'll be up to the program reading the changes to investigate the situation, and update local memory in response.
 
-### Unique Filenames
+### <a name="filenames">Unique Filenames</a>
 
 That's what the file looks like -- where does it go?
 
@@ -48,11 +48,11 @@ The filename might be:
 
 I like the traceability of the latter, but the former is easier to write code for.
 
-## Mechanisms Discussed
+## <a name="other-mechanisms">Other Mechanisms Discussed</a>
 
 The primary competing mechanisms are as follows:
 
-### Scanning All Files for Changes
+### <a name="scanning">Scanning All Files for Changes</a>
 
 That is, a process that is actively and continuously working with the tree, would look at all of the files in the tree, and see if there are any changes to them.  Did the modified timestamp change?  Or perhaps a hash of the file has changed?
 
@@ -64,7 +64,7 @@ The temptation would be to lengthen out the intervals, but then that means that 
 
 (I'd be worried about the user making conflicting changes within those 10 seconds, but then I realized that the program can verify the path up to where the user is making edits, as the user edits, -- just assuming that there may have been changes in that area.  So that would be caught before the user's change was issued.  Therefore, the issue is primarily about rapidly notifying the user of changes that are made by other programs.)
 
-### Use an OS/Filesystem Level Monitor
+### <a name="os-monitor">Use an OS/Filesystem Level Monitor</a>
 
 There are APIs for most operating systems and filesystems now, I understand, for getting notification that a file has changed.
 
@@ -79,7 +79,7 @@ And what happens if Windows changes their API, or Linux changes their API, or Ma
 
 I don't want to have to think about that.
 
-## Summary & Conclusion
+## <a name="summary">Summary & Conclusion</a>
 
 * Record Change Notifications
   * +: very simple to write
@@ -113,3 +113,31 @@ This said, if you are performing global search and replaces, and not getting "He
 
 And then on the other hand again, you could just trigger a total reload, either by a direct command within the program, or creating a file that simply says, "the entirety of the project was changed."  (Addressing the root node.)
 
+## <a name="watchexec">Addendum #1: WatchExec</a>
+
+Ciprian points out that there is a tool called [watchexec](https://github.com/watchexec/watchexec) that can perform file monitoring, and then run a program when it detects a change.
+
+Just glancing through the watchexec documentation, I see that it could be easily adapted to produce the unique change files.
+
+This would mean that all changes would be picked up, and this would mean that changing programs would not have to write notifications.
+
+Interesting!
+
+## <a name="changelog">Addendum #2: Fuller ChangeLog<a>
+
+> "It is a good idea to also catch change notifications somehow. ... On the other hand, how about renaming the `notifications` folder to something like `changelog`, let it be permanent, and structure it with fields similar to what is needed by an RSS feed (author like you've proposed, path, title, perhaps a diff); (the process ID is not much worth;) now one can easily create an RSS feed from this without other inputs." -- Ciprian
+
+This is also an interesting idea.  Rather than just sending the path to the changed file, supply a whole lot of information.
+
+I can imagine sending the following information, immediately:
+* the path to the file that was changed
+* a logical identifier for the data that was changed (perhaps a node#, or something)
+* when the change was made
+* the type of change that was made (create, delete, update)
+* information on how to undo the change
+* information on the process that made the change
+    * the PID for the process
+	* how to communicate back to the process that made the change
+	* the kind of process that it is
+	* human readable information about the process, for presentation
+	* the active human agent behind the process
