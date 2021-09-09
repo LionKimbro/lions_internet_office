@@ -1,0 +1,59 @@
+{
+    "TYPE": "tag:lionkimbro@gmail.com,2021-09-09:article-postings",
+    "VERSION": 1,
+    "SOURCE": "tag:lionkimbro@gmail.com,2021-09-09:source:lions-internet-office",
+    "ARTICLES":
+    [
+        {"TYPE": "tag:lionkimbro@gmail.com,2021-09-09:article-record",
+         "VERSION": 1,
+         "AUTHOR": "tag:lionkimbro@gmail.com,2021-09-09:person:lion",
+         "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-05_about-me.md",
+         "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-05_about-me.md",
+         "POSTED": "2021-09-05"},
+        
+        {"TYPE": "tag:lionkimbro@gmail.com,2021-09-09:article-record",
+         "VERSION": 1,
+         "AUTHOR": "tag:lionkimbro@gmail.com,2021-09-09:person:ciprian.cracium",
+         "HTML": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/6697ebb3.html",
+         "RAW": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/6697ebb3.txt",
+         "POSTED": "2021-09-05"},
+        
+        {"TYPE": "tag:lionkimbro@gmail.com,2021-09-09:article-record",
+         "VERSION": 1,
+         "AUTHOR": "tag:lionkimbro@gmail.com,2021-09-09:person:lion",
+         "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-06_programming-philosophy.md",
+         "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-06_programming-philosophy.md",
+         "POSTED": "2021-09-06"},
+
+        {"TYPE": "tag:lionkimbro@gmail.com,2021-09-09:article-record",
+         "VERSION": 1,
+         "AUTHOR": "tag:lionkimbro@gmail.com,2021-09-09:person:lion",
+         "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-06_programming-philosophy.md",
+         "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-06_programming-philosophy.md",
+         "POSTED": "2021-09-06"},
+
+        {"TYPE": "tag:lionkimbro@gmail.com,2021-09-09:article-record",
+         "VERSION": 1,
+         "AUTHOR": "tag:lionkimbro@gmail.com,2021-09-09:person:lion",
+         "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-06_revision-to-article-posting-system.md",
+         "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-06_revision-to-article-posting-system.md",
+         "POSTED": "2021-09-06"},
+
+        {"TYPE": "tag:lionkimbro@gmail.com,2021-09-09:article-record",
+         "VERSION": 1,
+         "AUTHOR": "tag:lionkimbro@gmail.com,2021-09-09:person:lion",
+         "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-07_exomarkup.md",
+         "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-07_exomarkup.md",
+         "POSTED": "2021-09-07"},
+
+        {"TYPE": "tag:lionkimbro@gmail.com,2021-09-09:article-record",
+         "VERSION": 1,
+         "AUTHOR": "tag:lionkimbro@gmail.com,2021-09-09:person:lion",
+         "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-08_update-communications-mechanisms.md",
+         "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-08_update-communications-mechanisms.md",
+         "POSTED": "2021-09-08"}
+    ]
+}
+
+
+
