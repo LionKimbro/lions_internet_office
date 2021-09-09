@@ -48,6 +48,13 @@
 
         {"TYPE": "tag:lionkimbro@gmail.com,2021-09-09:article-record",
          "VERSION": 1,
+         "AUTHOR": "tag:lionkimbro@gmail.com,2021-09-09:person:ciprian.cracium",
+         "HTML": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/4a56cfca.html",
+         "RAW": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/4a56cfca.txt",
+         "POSTED": "2021-09-08"},
+
+        {"TYPE": "tag:lionkimbro@gmail.com,2021-09-09:article-record",
+         "VERSION": 1,
          "AUTHOR": "tag:lionkimbro@gmail.com,2021-09-09:person:lion",
          "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-08_update-communications-mechanisms.md",
          "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-08_update-communications-mechanisms.md",
