@@ -36,6 +36,8 @@ Presumably, there is some folder somewhere, that change notifications go into.  
 
 Unique filenames are necessary so that two non-communicating processes don't clobber one another.  Unique filenames could be created with a v4 UUID, they could be created from 3-tuple PID, process start time, & serial number.  All that really matters, though, is that the filenames are unique.
 
+***Addendum, 2021-09-09 1:11a Seattle:** Ciprian points out that PID+time is not unique if the filesystem is shared and different systems can touch the directory space.  At this point, you'd need to add in the MAC address or some other unique identifier of the computer itself.*
+
 So the filename for the change update might just be:
 
     C:\Users\Lion\my-notes\notifications\92e64607-7858-45e3-8806-184a95d678e1.txt
