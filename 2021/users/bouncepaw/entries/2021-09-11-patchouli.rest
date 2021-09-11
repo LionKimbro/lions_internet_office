@@ -1,0 +1,92 @@
+Patchouli
+*********
+
+On a wiki, you write separate articles/notes and *link* them together. In a chat messaging app, you don't really link messages together, you just write them one after another.
+
+Each approach excels in different situations, but each approach can be used for any situation. Sure, sending messages to a chronological feed is cool, but we can easily talk in a text document. Sure, people expect very long detailed articles to be in a separate document, but why not send it to a chat as a big message?
+
+I've already created a piece of software that is meant to be used with the first approach, it is called Mycorrhiza Wiki, and you've probably already heard of it, because I tell everyone about it. See https://mycorrhiza.wiki
+
+But what kind of software one could create that takes cool stuff from the first approach (cool links, long texts, the sense of monumentality) with the second approach (ease of writing, strict order of messages)? One could make a book-writing simulator.
+
+What's so good about books?
+#######
+
+First, they are very natural for humans to do, so it is easy to write one. I mean, students write countless notes in countless notebooks; keeping yet another book is no hassle.
+
+Second, a long and big book feels cool.
+
+Third, there is a strict order. Chapter after chapter, page after page until the book is over.
+
+And links? Well, we can give every individual paragraph an anchor (just like messages in Discord or Telegram) and link *them*. Seems ok. Maybe even link separate sentences?
+
+It is easy to convert a physical diary, a physical notebook or a sketchbook, a chat message history or whatever.
+
+The software
+########
+
+**Patchouli** is a temporary name for the concept of such book-writing software. I'll describe the logic of the software below. I will not give technical details of implementation, because I'm not going to implement it any time soon.
+
+You have a collection of books. This collection is synchronised across all of your devices. The books are local-only, only afterwards they are synced, if you want. If you edit the same book from different devices in different ways, the books will be somehow merged.
+
+Once you pick a book, you can read it or write in it. The editing interface is similar to that of `Canon Cat <https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/bouncepaw/entries/2021-09-10-canon-cat.md>`_, i/e double cursor, modeless interface, selection-oriented commands. You separate distinct chapters from each other with the chapter separator character. To insert it, press ⌘N (new chapter). Chapters don't have to have a name. Sure, you can write a heading there, but it's not required. Chapters cannot be nested. There should be hotkeys for quick navigation between chapters. Having a Leap-like search would be great, but modern standard keyboards don't have enough keys under the space bar for that.
+
+Chapters are shown one after another. Like that::
+
+  --Chapter separator--
+  --A picture here--
+  CHAPTER 1. LOOMINGS.
+  
+  Call me Ishmael.  Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.  It is a way I have of driving off the spleen, and regulating the circulation...
+  
+  But look! here come more crowds, pacing straight for the water, and seemingly bound for a dive.  Strange!  Nothing will content them but the extremest limit of the land; loitering under the shady lee of yonder warehouses will not suffice...
+  
+  --Chapter separator--
+  CHAPTER 2. THE CARPET-BAG.
+  
+  I stuffed a shirt or two into my old carpet-bag, tucked it under my arm, and started for Cape Horn and the Pacific.  Quitting the good city of old Manhatto, I duly arrived in New Bedford.  It was on a Saturday night in December.  Much was I disappointed upon learning that the little packet for Nantucket had already sailed, and that no way of reaching that place would offer, till the following Monday...
+  
+  --Chapter separator--
+  Here are my thoughts on these two chapters: ...
+  
+Something like that. One could scrool through the book, like a web page. A book-like interface should also be offered. The pages should be window-tall and no taller.
+
+Hypermedia
+=====
+
+It seems obvious to me that any modern system should be hypermedia if it makes sense. Thus, Patchouli should support:
+
+* Bold, italic, underline and other basic text styling
+* Links
+  
+  * Select a text and tell the software to make a link to this text.
+* Images
+  
+  * Drawing inside the book with the pointer if you hold ⌥Alt.
+* Videos
+  
+  * Film a video right from the book.
+* Audio
+  
+  * Talk to the book and transcribe it immediately.
+
+Other features:
+
+* Drag-n-drop anything to the book
+  
+  * Files will be attached somehow
+  * Drop a webpage to copy its content
+* Export (whole book, chapter, selected text) to:
+
+  * HTML
+  * PDF
+  * Mycomarkup
+  * RTF
+* The program should be fast, fast, fast
+* Auto-save 300ms after the user stopped doing anything and on close, auto-sync less often
+* The best possible full-text search. Using NLP, perhaps
+
+Conslusion
+======
+
+Does such a cool program exist? No, of course not. It just cannot. Will I make it? Also no, it is too hard for me now. Even a simple prototype would take me a year.
