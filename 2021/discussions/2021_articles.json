@@ -80,6 +80,13 @@
          "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/bouncepaw/entries/2021-09-11-patchouli.rest",
          "HOOK": "Patchouli",
          "POSTED": "2021-09-11"},
+        
+        {"$SCHEMA": "tag:lionkimbro@gmail.com,2021:schema:article-posting-v1",
+         "AUTHORS": ["tag:lionkimbro@gmail.com,2021:person:lion"],
+         "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-12_nlsd_alphabet.md",
+         "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-12_nlsd_alphabet.md",
+         "HOOK": "NLSD Alphabet",
+         "POSTED": "2021-09-12"}
     ]
 }
 
