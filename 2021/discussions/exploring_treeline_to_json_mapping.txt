@@ -1,0 +1,42 @@
+Data Type:
+  name?
+    "article-postings-list-v1" (<-> $SCHEMA: "tag:lionkimbro@gmail.com,2021:schema:article-postings-list-v1")
+  icon?
+    picked out: "book_3"
+
+  fields:
+    + name: "UID" <-> "$UID" (w /a tag:.. identifier in it)
+      type: "OneLineText" <-> (because it's a single tag value)
+    + name: "SOURCE" <-> "SOURCE" (w/ a tag:... identifier in it)
+      type: "OneLineText" <-> (because it's a single tag value)
+
+
+PLACED BENETAH IT A HARD CODED "NAMEDLIST",
+  Key: "ARTICLES" -- because that's the name of the list;
+
+
+(alternatively, there could be a NAMEDDICT,)
+
+Data Type:
+  name?
+    "article-posting-v1"  (SAME)
+  icon?
+    picked out: "write"
+
+  field:
+    +name: "AUTHORS"
+      - SpacedText, # of lines: 5, BECAUSE: it takes a list of single line items (tags, specifically)
+    +name: "HTML"
+      - OneLineText, -- because it takes a URL
+    +name: "RAW"
+      - OneLineText, -- because it takes a URL
+    +name: "POSTED"
+      - OneLineText, -- because it's an ISO-8601 date
+
+  output was set to {*POSTED*}, because it looked most aesthetic
+
+
+Data -> TreeLine document
+- if you recognized the $SCHEMA, you could pull a "formats" list;
+- and then construct the nodes
+

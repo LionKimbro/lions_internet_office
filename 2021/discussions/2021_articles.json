@@ -56,7 +56,19 @@
          "AUTHORS": ["tag:lionkimbro@gmail.com,2021:person:bouncepaw"],
          "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/bouncepaw/entries/2021-09-10-canon-cat.md",
          "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/bouncepaw/entries/2021-09-10-canon-cat.md",
-         "POSTED": "2021-09-10"}
+         "POSTED": "2021-09-10"},
+
+        {"$SCHEMA": "tag:lionkimbro@gmail.com,2021:schema:article-posting-v1",
+         "AUTHORS": ["tag:lionkimbro@gmail.com,2021:person:ciprian.cracium"],
+         "HTML": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/19817cd9.html",
+         "RAW": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/19817cd9.txt",
+         "POSTED": "2021-09-11"},
+        
+        {"$SCHEMA": "tag:lionkimbro@gmail.com,2021:schema:article-posting-v1",
+         "AUTHORS": ["tag:lionkimbro@gmail.com,2021:person:bouncepaw"],
+         "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/bouncepaw/entries/2021-09-11-patchouli.rest",
+         "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/bouncepaw/entries/2021-09-11-patchouli.rest",
+         "POSTED": "2021-09-11"},
     ]
 }
 
