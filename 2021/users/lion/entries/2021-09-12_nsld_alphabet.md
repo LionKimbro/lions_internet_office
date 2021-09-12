@@ -1,3 +1,4 @@
+
 # NLSD Alphabet
 Lion Kimbro
 started 2021-09-10
@@ -106,7 +107,24 @@ I have not explored this model deeply, and am presently skeptical, but I am also
 Regardless, we developed these concepts as they would appear in NLSD:
 
 * entities & links:
-  * **E** -- the node is an entity, and it's unique identifier is specified as an argument
-  * **L** -- a link, with a left side and a right side, and possibly also an argument
-  * **S** -- the node meets a schema, and it's schema is identified as an argument -- (we imagined this could be used both for Associative Data Model "Entities" and "Links," and "primitive data" as well)
+  * **E** -- entity -- the node is an entity, and it's unique identifier is specified as an argument
+  * **L** -- link -- a link, with a left side and a right side, and possibly also an argument
+  * **S** -- schema -- the node meets a schema, and it's schema is identified as an argument -- (we imagined this could be used both for Associative Data Model "Entities" and "Links," and "primitive data" as well)
 
+Note: *"S" for Schema conflicts with "S" for string; so it's likely that strings would be represented with lower-case "s", which would match "b" (binary).*
+
+### <a name="lightweight-location">Lightweight Location</a>
+
+Isolating Entities is interesting to me, none-the-less:  declarations that "Here is this unique thing, and I'm describing it."
+
+I have questions about what happens when entities are declared differently in two different documents, though.
+
+It led me to imagine a general "Global" data declaration node type.
+
+* global declaration
+  * **G** -- global declaration -- "This data item is the root of a declaration of an item that is globally identifiable with this string" -- and that string would be a GUID or a [tag URI](https://en.wikipedia.org/wiki/Tag_URI_scheme) or something like that
+  * **U** -- (same, but "Universal") -- because maybe our ambition stretches out beyond 地球, planet Earth
+
+With "G" (or "U"), while parsing a document, you could quickly isolate and index the items that are claiming to make authoritative assertions about the global space.  As I envision it, you would NOT use this on a link to a global claim; you would only apply this on the global claim itself.
+
+I would expect that the module of code that retains the data collection of nodes and indexes into the nodes, would also keep track of where a particular claim came from.  So if you asked for data about a particular GUID, you would get back a list of: "This source says X, this other source says Y, and this still other source said Z."
