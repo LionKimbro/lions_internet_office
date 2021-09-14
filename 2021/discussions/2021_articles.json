@@ -93,6 +93,13 @@
          "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-13_entity-focal-data-package.md",
          "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-13_entity-focal-data-package.md",
          "HOOK": "Entity-Focal Data Package",
+         "POSTED": "2021-09-13"},
+
+        {"$SCHEMA": "tag:lionkimbro@gmail.com,2021:schema:article-posting-v1",
+         "AUTHORS": ["tag:lionkimbro@gmail.com,2021:person:lion"],
+         "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-13_the-generic-thing.md",
+         "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-13_the-generic-thing.md",
+         "HOOK": "The Generic Thing",
          "POSTED": "2021-09-13"}
     ]
 }
