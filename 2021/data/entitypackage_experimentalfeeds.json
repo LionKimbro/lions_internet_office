@@ -8,7 +8,7 @@
           "TITLE": "Schema for Experimental Feeds (v1)",
           "DESCRIPTION": "feeds have a $UID, $SCHEMA, TITLE, and a list of ARTICLES; in the future there will be more, but this is for the time being"}],
         
-        "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+        "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1":
         [{"$UID": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
           "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:schema-v1",
           "TITLE": "Schema for Experimental Articles (v1)",
