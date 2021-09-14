@@ -1,0 +1,25 @@
+{
+    "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:entity-package-v1",
+    "$UID": "tag:lionkimbro@gmail.com,2021:entity-package:entity-system-basics-v1",
+    "ENTITIES": {
+        "tag:lionkimbro@gmail.com,2021:entity-schema:schema-v1":
+        [{"$UID": "tag:lionkimbro@gmail.com,2021:entity-schema:schema-v1",
+          "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:schema-v1",
+          "TITLE": "Schema (v1) for the Entity-Focal Data System",
+          "DESCRIPTION": "v1 schemas have a $UID, $SCHEMA that is schema:schema-v1, a TITLE, and a DESCRIPTION"}],
+
+        "tag:lionkimbro@gmail.com,2021:entity-schema:entity-package-v1":
+        [{"$UID": "tag:lionkimbro@gmail.com,2021:entity-schema:entity-package-v1",
+          "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:schema-v1",
+          "TITLE": "Schema for Entity Packages (v1)",
+          "DESCRIPTION": "entity packages have a $SCHEMA, $UID self-declaration, package ENTITIES, and MOREINFO"}],
+
+        "tag:lionkimbro@gmail.com,2021:entity-schema:generic-v1":
+        [{"$UID": "tag:lionkimbro@gmail.com,2021:entity-schema:generic-v1",
+          "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:schema-v1",
+          "TITLE": "Schema for Generic Entities (v1)",
+          "DESCRIPTION": "generic entities have $UID, $SCHEMA, and can choose whether or not to specify: LANG, TYPE, TITLE, HOOK, DESCRIPTION, TAGS, URL, CREATED, DATE, DATA, CONTENT, BINARY.  See https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-13_the-generic-thing.md for further information."}]
+    },
+    "MOREINFO": []
+}
+

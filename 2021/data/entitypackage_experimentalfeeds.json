@@ -1,0 +1,22 @@
+{
+    "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:entity-package-v1",
+    "$UID": "tag:lionkimbro@gmail.com,2021:entity-package:experimental-feeds-v1",
+    "ENTITIES": {
+        "tag:lionkimbro@gmail.com,2021:entity-schema:article-feed-v1":
+        [{"$UID": "tag:lionkimbro@gmail.com,2021:entity-schema:article-feed-v1",
+          "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:schema-v1",
+          "TITLE": "Schema for Experimental Feeds (v1)",
+          "DESCRIPTION": "feeds have a $UID, $SCHEMA, TITLE, and a list of ARTICLES; in the future there will be more, but this is for the time being"}],
+        
+        "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+        [{"$UID": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+          "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:schema-v1",
+          "TITLE": "Schema for Experimental Articles (v1)",
+          "DESCRIPTION": "articles have a $SCHEMA, $UID, a list of AUTHORS, an HTML link, a RAW link, a HOOK, and a POSTED date"}]
+    },
+    "MOREINFO": [
+        {"SOURCE": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/data/entitypackage_basics.json",
+         "DESCRIBES": ["tag:lionkimbro@gmail.com,2021:entity-schema:schema-v1", "tag:lionkimbro@gmail.com,2021:entity-schema:entity-package-v1"]}
+    ]
+}
+

@@ -1,0 +1,650 @@
+{
+   "formats": [
+      {
+         "fields": [
+            {
+               "fieldname": "Name",
+               "fieldtype": "OneLineText"
+            }
+         ],
+         "formatname": "DEFAULT",
+         "outputlines": [
+            "{*Name*}"
+         ],
+         "titleline": "{*Name*}"
+      },
+      {
+         "fields": [
+            {
+               "fieldname": "Name",
+               "fieldtype": "OneLineText"
+            },
+            {
+               "fieldname": "UID",
+               "fieldtype": "OneLineText"
+            },
+            {
+               "fieldname": "SCHEMA",
+               "fieldtype": "OneLineText"
+            },
+            {
+               "fieldname": "Data",
+               "fieldtype": "SpacedText",
+               "lines": 10
+            }
+         ],
+         "formatname": "Entity",
+         "icon": "star",
+         "outputlines": [
+            "{*Name*}"
+         ],
+         "titleline": "{*Name*} - {*UID*}"
+      },
+      {
+         "fields": [
+            {
+               "fieldname": "Name",
+               "fieldtype": "Text"
+            },
+            {
+               "fieldname": "UID",
+               "fieldtype": "OneLineText"
+            },
+            {
+               "fieldname": "FileLoc",
+               "fieldtype": "OneLineText"
+            }
+         ],
+         "formatname": "EntityPackage",
+         "icon": "doc",
+         "outputlines": [
+            "{*Name*}"
+         ],
+         "titleline": "{*Name*} - {*UID*}"
+      },
+      {
+         "fields": [
+            {
+               "fieldname": "Name",
+               "fieldtype": "Text"
+            }
+         ],
+         "formatname": "MoreInfo",
+         "outputlines": [
+            "{*Name*}"
+         ],
+         "titleline": "{*Name*}"
+      },
+      {
+         "fields": [
+            {
+               "fieldname": "Name",
+               "fieldtype": "OneLineText"
+            },
+            {
+               "fieldname": "Text",
+               "fieldtype": "SpacedText",
+               "lines": 16
+            }
+         ],
+         "formatname": "Notes",
+         "icon": "note",
+         "outputlines": [
+            "{*Name*}"
+         ],
+         "titleline": "{*Name*}"
+      },
+      {
+         "fields": [
+            {
+               "fieldname": "Name",
+               "fieldtype": "OneLineText"
+            },
+            {
+               "fieldname": "LongForm",
+               "fieldtype": "OneLineText"
+            }
+         ],
+         "formatname": "Shortcut",
+         "icon": "arrow_4",
+         "outputlines": [
+            "{*Name*}"
+         ],
+         "titleline": "{*Name*}"
+      }
+   ],
+   "nodes": [
+      {
+         "children": [
+            "2e93813214e711ec93f260a44c24df47"
+         ],
+         "data": {
+            "Name": "Tag Namespace"
+         },
+         "format": "DEFAULT",
+         "uid": "23e649c914e711ec950960a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "LongForm": "tag:lionkimbro@gmail.com,2021:entity-schema:entity-package-v1",
+            "Name": "SC_PACKAGE"
+         },
+         "format": "Shortcut",
+         "uid": "2e0bf01014cf11ec9c3260a44c24df47"
+      },
+      {
+         "children": [
+            "35dcc59414e711ec842560a44c24df47",
+            "41fbc8b414e711ecb5d960a44c24df47",
+            "8599177b14e711ecbd5360a44c24df47",
+            "99b621a914eb11ec9a8660a44c24df47"
+         ],
+         "data": {
+            "Name": "lionkimbro@gmail.com,2021"
+         },
+         "format": "DEFAULT",
+         "uid": "2e93813214e711ec93f260a44c24df47"
+      },
+      {
+         "children": [
+            "9173b06114e711ecbe1c60a44c24df47",
+            "a0c82a2b14e711ecaa5c60a44c24df47",
+            "ac65fadc14f411ecb14c60a44c24df47",
+            "a3c1e2f314e711eca62060a44c24df47",
+            "a685de4d14e711ec901a60a44c24df47"
+         ],
+         "data": {
+            "Name": "entity-schema"
+         },
+         "format": "DEFAULT",
+         "uid": "35dcc59414e711ec842560a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Data": "{\"TITLE\": \"Schema for Experimental Feeds (v1)\",\n \"DESCRIPTION\": \"feeds have a $UID, $SCHEMA, TITLE, and a list of ARTICLES; in the future there will be more, but this is for the time being\"}",
+            "Name": "Feed",
+            "SCHEMA": "SC_SCHEMA",
+            "UID": "SC_ARTICLEFEED"
+         },
+         "format": "Entity",
+         "uid": "3f03511114e911ecac8e60a44c24df47"
+      },
+      {
+         "children": [
+            "abc4ad1614e711ecae7460a44c24df47",
+            "b91eabbb14e711ecb82460a44c24df47",
+            "c91a6ec314e711ecbb9c60a44c24df47"
+         ],
+         "data": {
+            "Name": "entity-package"
+         },
+         "format": "DEFAULT",
+         "uid": "41fbc8b414e711ecb5d960a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Data": "{\"TITLE\": \"Schema for Experimental Articles (v1)\",\n \"DESCRIPTION\": \"articles have a $SCHEMA, $UID, a list of AUTHORS, an HTML link, a RAW link, a HOOK, and a POSTED date\"}",
+            "Name": "Article",
+            "SCHEMA": "SC_SCHEMA",
+            "UID": "SC_ARTICLE"
+         },
+         "format": "Entity",
+         "uid": "429633fa14e911ecbd4560a44c24df47"
+      },
+      {
+         "children": [
+            "9aee717714cf11ecbfd660a44c24df47",
+            "a08033b814cf11ec86ca60a44c24df47",
+            "92673a4f14e611ec9e6160a44c24df47"
+         ],
+         "data": {
+            "Name": "Shortcuts"
+         },
+         "format": "DEFAULT",
+         "uid": "57858f2814cf11ec9d3e60a44c24df47"
+      },
+      {
+         "children": [
+            "d4e30f2b14e911ec8bd360a44c24df47",
+            "ebf5d7c914e911ec9c7d60a44c24df47",
+            "f69e394114e911ecb1b160a44c24df47",
+            "f6fa664814e911ecbb2060a44c24df47"
+         ],
+         "data": {
+            "FileLoc": "/2021/discussions/entitypackage_lionsinternetoffice_discussions.json",
+            "Name": "entitypackage_lionsinternetoffice.json",
+            "UID": "PKG_LIONSINTERNETOFFICE"
+         },
+         "format": "EntityPackage",
+         "uid": "5c4f119814cf11ecad9960a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Data": "{\"TITLE\": \"Schema for Schemas (v1)\",\n \"DESCRIPTION\": \"schemas have a $UID, $SCHEMA, TITLE, and DESCRIPTION\"}",
+            "Name": "Schema",
+            "SCHEMA": "SC_SCHEMA",
+            "UID": "SC_SCHEMA"
+         },
+         "format": "Entity",
+         "uid": "62a3bdd914d011ecb2ef60a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "LongForm": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+            "Name": "SC_ARTICLE"
+         },
+         "format": "Shortcut",
+         "uid": "6abd942914e611eca9a460a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "LongForm": "tag:lionkimbro@gmail.com,2021:entity-schema:schema-v1",
+            "Name": "SC_SCHEMA"
+         },
+         "format": "Shortcut",
+         "uid": "6c659f1f14d011ecb9db60a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "LongForm": "tag:lionkimbro@gmail.com,2021:entity-schema:article-feed-v1",
+            "Name": "SC_ARTICLEFEED"
+         },
+         "format": "Shortcut",
+         "uid": "723dc3f614e611eca44060a44c24df47"
+      },
+      {
+         "children": [
+            "e425155614e711ecb29160a44c24df47"
+         ],
+         "data": {
+            "Name": "lions-internet-office"
+         },
+         "format": "DEFAULT",
+         "uid": "8599177b14e711ecbd5360a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "LongForm": "lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-0",
+            "Name": "POST-0"
+         },
+         "format": "Shortcut",
+         "uid": "8900187d14e811ec846560a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Name": "schema-v1"
+         },
+         "format": "DEFAULT",
+         "uid": "9173b06114e711ecbe1c60a44c24df47"
+      },
+      {
+         "children": [
+            "99e1206214e611ec883960a44c24df47",
+            "8900187d14e811ec846560a44c24df47",
+            "9719577014e811ecb82960a44c24df47",
+            "97932f2a14e811ecb22660a44c24df47"
+         ],
+         "data": {
+            "Name": "non-package entities"
+         },
+         "format": "DEFAULT",
+         "uid": "92673a4f14e611ec9e6160a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "LongForm": "lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-1",
+            "Name": "POST-1"
+         },
+         "format": "Shortcut",
+         "uid": "9719577014e811ecb82960a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "LongForm": "lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-2",
+            "Name": "POST-2"
+         },
+         "format": "Shortcut",
+         "uid": "97932f2a14e811ecb22660a44c24df47"
+      },
+      {
+         "children": [
+            "9cc5e73714eb11ecb4e560a44c24df47",
+            "a0b15b7714eb11eca17660a44c24df47",
+            "a13dd60214eb11ec823960a44c24df47"
+         ],
+         "data": {
+            "Name": "person (PRESENTLY NO DATA EXISTS FOR DESCRIBING)"
+         },
+         "format": "DEFAULT",
+         "uid": "99b621a914eb11ec9a8660a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "LongForm": "lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:feed",
+            "Name": "LIOFEED"
+         },
+         "format": "Shortcut",
+         "uid": "99e1206214e611ec883960a44c24df47"
+      },
+      {
+         "children": [
+            "6c659f1f14d011ecb9db60a44c24df47",
+            "2e0bf01014cf11ec9c3260a44c24df47",
+            "b38815e714f411eca2c260a44c24df47",
+            "723dc3f614e611eca44060a44c24df47",
+            "6abd942914e611eca9a460a44c24df47"
+         ],
+         "data": {
+            "Name": "schema"
+         },
+         "format": "DEFAULT",
+         "uid": "9aee717714cf11ecbfd660a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Data": "{\"TITLE\": \"Schema for Entity Packages (v1)\",\n \"DESCRIPTION\": \"entity packages have a $UID, $SCHEMA, ENTITIES, and MOREINFO; auto-populated into database by loaders from correctly formatted JSON\"}",
+            "Name": "Package",
+            "SCHEMA": "SC_SCHEMA",
+            "UID": "SC_PACKAGE"
+         },
+         "format": "Entity",
+         "uid": "9af40cc914d011ecabb760a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Name": "lion"
+         },
+         "format": "DEFAULT",
+         "uid": "9cc5e73714eb11ecb4e560a44c24df47"
+      },
+      {
+         "children": [
+            "e8acb53114cf11ec989960a44c24df47",
+            "ad02a10814cf11ec893a60a44c24df47",
+            "b4f3d81c14cf11ec9f2960a44c24df47"
+         ],
+         "data": {
+            "Name": "packages"
+         },
+         "format": "DEFAULT",
+         "uid": "a08033b814cf11ec86ca60a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Name": "ciprian.cracium"
+         },
+         "format": "DEFAULT",
+         "uid": "a0b15b7714eb11eca17660a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Name": "entity-package-v1"
+         },
+         "format": "DEFAULT",
+         "uid": "a0c82a2b14e711ecaa5c60a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Name": "bouncepaw"
+         },
+         "format": "DEFAULT",
+         "uid": "a13dd60214eb11ec823960a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Name": "article-feed-v1"
+         },
+         "format": "DEFAULT",
+         "uid": "a3c1e2f314e711eca62060a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Name": "article-v1"
+         },
+         "format": "DEFAULT",
+         "uid": "a685de4d14e711ec901a60a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Name": "entity-system-basics-v1"
+         },
+         "format": "DEFAULT",
+         "uid": "abc4ad1614e711ecae7460a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Name": "generic-v1"
+         },
+         "format": "DEFAULT",
+         "uid": "ac65fadc14f411ecb14c60a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "LongForm": "tag:lionkimbro@gmail.com,2021:entity-package:experimental-feeds-v1",
+            "Name": "PKG_FEEDS"
+         },
+         "format": "Shortcut",
+         "uid": "ad02a10814cf11ec893a60a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "LongForm": "tag:lionkimbro@gmail.com,2021:entity-schema:generic-v1",
+            "Name": "SC_GENERIC"
+         },
+         "format": "Shortcut",
+         "uid": "b38815e714f411eca2c260a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "LongForm": "tag:lionkimbro@gmail.com,2021:entity-package:lions-internet-office-discussions-v1",
+            "Name": "PKG_LIONSINTERNETOFFICE"
+         },
+         "format": "Shortcut",
+         "uid": "b4f3d81c14cf11ec9f2960a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Name": "experimental-feeds-v1"
+         },
+         "format": "DEFAULT",
+         "uid": "b91eabbb14e711ecb82460a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Data": "{\"TITLE\": \"Schema for Generic Entities (v1)\",\n \"DESCRIPTION\": \"generic entities have $UID, $SCHEMA, and can choose whether or not to specify: LANG, TYPE, TITLE, HOOK, DESCRIPTION, TAGS, URL, CREATED, DATE, DATA, CONTENT, BINARY.  See https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-13_the-generic-thing.md for further information.\"}",
+            "Name": "Generic",
+            "SCHEMA": "SC_SCHEMA",
+            "UID": "SC_GENERIC"
+         },
+         "format": "Entity",
+         "uid": "c767a27914f411eca1d360a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Name": "lions-internet-office-discussions-v1"
+         },
+         "format": "DEFAULT",
+         "uid": "c91a6ec314e711ecbb9c60a44c24df47"
+      },
+      {
+         "children": [
+            "f6d4e27414cf11eca66d60a44c24df47",
+            "de371a2214e811eca61e60a44c24df47",
+            "5c4f119814cf11ecad9960a44c24df47",
+            "57858f2814cf11ec9d3e60a44c24df47",
+            "23e649c914e711ec950960a44c24df47"
+         ],
+         "data": {
+            "Name": "Main"
+         },
+         "format": "DEFAULT",
+         "uid": "d05aeb4614ce11eca1c160a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Data": "{\"TITLE\": \"Lion's Internet Office -- Discussions Feed\",\n \"ARTICLES\": [\"...\"]}",
+            "Name": "the Feed for Lions Internet Office Discussions",
+            "SCHEMA": "SC_ARTICLEFEED",
+            "UID": "LIOFEED"
+         },
+         "format": "Entity",
+         "uid": "d4e30f2b14e911ec8bd360a44c24df47"
+      },
+      {
+         "children": [
+            "3f03511114e911ecac8e60a44c24df47",
+            "429633fa14e911ecbd4560a44c24df47"
+         ],
+         "data": {
+            "FileLoc": "/2021/data/entitypackage_experimentalfeeds.json",
+            "Name": "entitypackage_experimentalfeeds.json",
+            "UID": "PKG_FEEDS"
+         },
+         "format": "EntityPackage",
+         "uid": "de371a2214e811eca61e60a44c24df47"
+      },
+      {
+         "children": [
+            "e8e4c44914e711eca80b60a44c24df47"
+         ],
+         "data": {
+            "Name": "feeds"
+         },
+         "format": "DEFAULT",
+         "uid": "e425155614e711ecb29160a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "LongForm": "tag:lionkimbro@gmail.com,2021:entity-package:entity-system-basics-v1",
+            "Name": "PKG_BASICS"
+         },
+         "format": "Shortcut",
+         "uid": "e8acb53114cf11ec989960a44c24df47"
+      },
+      {
+         "children": [
+            "f96d09b614e711ecae0960a44c24df47",
+            "f021be6314e711ecb5e960a44c24df47",
+            "f5002e0614e711ecad7460a44c24df47",
+            "f6685ccf14e711ecbe0f60a44c24df47"
+         ],
+         "data": {
+            "Name": "discussions"
+         },
+         "format": "DEFAULT",
+         "uid": "e8e4c44914e711eca80b60a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Data": " \"DESCRIPTION\": \"articles have a $SCHEMA, $UID, a list of AUTHORS, an HTML link, a RAW link, a HOOK, and a POSTED date\"}\n{\"AUTHORS\": [LION]",
+            "Name": "Post #0",
+            "SCHEMA": "SC_ARTICLE",
+            "UID": "POST-0"
+         },
+         "format": "Entity",
+         "uid": "ebf5d7c914e911ec9c7d60a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Name": "post-0"
+         },
+         "format": "DEFAULT",
+         "uid": "f021be6314e711ecb5e960a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Name": "post-1"
+         },
+         "format": "DEFAULT",
+         "uid": "f5002e0614e711ecad7460a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Name": "post-2"
+         },
+         "format": "DEFAULT",
+         "uid": "f6685ccf14e711ecbe0f60a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Name": "Post #1",
+            "SCHEMA": "SC_ARTICLE",
+            "UID": "POST-1"
+         },
+         "format": "Entity",
+         "uid": "f69e394114e911ecb1b160a44c24df47"
+      },
+      {
+         "children": [
+            "62a3bdd914d011ecb2ef60a44c24df47",
+            "9af40cc914d011ecabb760a44c24df47",
+            "c767a27914f411eca1d360a44c24df47"
+         ],
+         "data": {
+            "FileLoc": "/2021/data/entitypackage_basics.json",
+            "Name": "entitypackage_basics.json",
+            "UID": "PKG_BASICS"
+         },
+         "format": "EntityPackage",
+         "uid": "f6d4e27414cf11eca66d60a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Name": "Post #2",
+            "SCHEMA": "SC_ARTICLE",
+            "UID": "POST-2"
+         },
+         "format": "Entity",
+         "uid": "f6fa664814e911ecbb2060a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "Name": "feed"
+         },
+         "format": "DEFAULT",
+         "uid": "f96d09b614e711ecae0960a44c24df47"
+      }
+   ],
+   "properties": {
+      "tlversion": "3.1.3",
+      "topnodes": [
+         "d05aeb4614ce11eca1c160a44c24df47"
+      ]
+   }
+}
