@@ -28,7 +28,7 @@
           "AUTHORS": ["tag:lionkimbro@gmail.com,2021:person:lion"],
           "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-05_about-me.md",
           "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-05_about-me.md",
-          "HOOK": "about Lion Kimbro"
+          "HOOK": "about Lion Kimbro",
           "POSTED": "2021-09-05"}],
 
         "lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-1":
@@ -37,7 +37,7 @@
           "AUTHORS": ["tag:lionkimbro@gmail.com,2021:person:ciprian.cracium"],
           "HTML": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/6697ebb3.html",
           "RAW": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/6697ebb3.txt",
-          "HOOK": "storing tree structures on file system"
+          "HOOK": "storing tree structures on file system",
           "POSTED": "2021-09-05"}],
         
         "lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-2":
@@ -166,7 +166,7 @@
           "$UID": "tag:lionkimbro@gmail.com,2021:person:bouncepaw",
           "TITLE": "BouncePaw",
           "TYPE": "a person"}]
-    ],
+    },
     "MOREINFO": [
         {"SOURCE": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/data/entitypackage_basics.json",
          "DESCRIBES": ["tag:lionkimbro@gmail.com,2021:entity-schema:schema-v1", "tag:lionkimbro@gmail.com,2021:entity-schema:entity-package-v1", "tag:lionkimbro@gmail.com,2021:entity-schema:generic-v1"]},
