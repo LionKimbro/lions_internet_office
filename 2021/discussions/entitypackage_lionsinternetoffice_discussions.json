@@ -20,7 +20,8 @@
               "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-10",
               "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-11",
               "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-12",
-              "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-13"]}],
+              "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-13",
+              "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-14"]}],
         
         "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-0":
         [{"$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
@@ -102,7 +103,6 @@
           "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/bouncepaw/entries/2021-09-10-canon-cat.md",
           "HOOK": "Good Things about Canon Cat",
           "POSTED": "2021-09-10"}],
-
         
         "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-9":
         [{"$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
@@ -149,6 +149,15 @@
           "HOOK": "a shared intermediary wikisyntax",
           "POSTED": "2021-09-13"}],
 
+        "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-14":
+        [{"$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+          "$UID": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-14",
+          "AUTHORS": ["tag:lionkimbro@gmail.com,2021:person:ciprian.cracium"],
+          "HTML": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/58cdcdcd.html",
+          "RAW": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/58cdcdcd.txt",
+          "HOOK": "imagining a universal wiki intermediary",
+          "POSTED": "2021-09-13"}],
+        
         "tag:lionkimbro@gmail.com,2021:person:lion":
         [{"$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:generic-v1",
           "$UID": "tag:lionkimbro@gmail.com,2021:person:lion",
