@@ -115,7 +115,7 @@ def gen_entitypackage1():
         D["POSTED"] = srcD["POSTED"]
         masterD["ENTITIES"][new_id] = [D]
         masterD["ENTITIES"]["tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:feed"][0]["ARTICLES"].append(new_id)
-    json.dump(masterD, open("eraseme.json", "w", encoding="utf-8"), indent=2)
+    json.dump(masterD, open("entitypackage_lionsinternetoffice_discussions.json", "w", encoding="utf-8"), indent=2)
 
 def gen_entitypackage2():
     """this variant does not use a dictionary to list entities"""
@@ -132,7 +132,7 @@ def gen_entitypackage2():
         D["POSTED"] = srcD["POSTED"]
         masterD["ENTITIES"].append(D)
         masterD["ENTITIES"][0]["ARTICLES"].append(new_id)
-    json.dump(masterD, open("eraseme.json", "w", encoding="utf-8"), indent=2)
+    json.dump(masterD, open("entitypackage_lionsinternetoffice_discussions.json", "w", encoding="utf-8"), indent=2)
 
 
 def run():

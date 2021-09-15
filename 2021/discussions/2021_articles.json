@@ -152,6 +152,16 @@
       "RAW": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/58cdcdcd.txt",
       "HOOK": "imagining a universal wiki intermediary",
       "POSTED": "2021-09-13"
+    },
+    {
+      "$SCHEMA": "tag:lionkimbro@gmail.com,2021:schema:article-posting-v1",
+      "AUTHORS": [
+        "tag:lionkimbro@gmail.com,2021:person:lion"
+      ],
+      "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-14_related-works.md.md",
+      "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-14_related-works.md",
+      "HOOK": "works related to what we've been doing",
+      "POSTED": "2021-09-14"
     }
   ]
 }
