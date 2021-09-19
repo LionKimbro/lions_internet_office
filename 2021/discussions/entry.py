@@ -13,6 +13,15 @@ def write_clipboard(s):
     pyperclip.copy(s.replace("\n", "\r\n"))
 
 
+def quote(s):
+    s = s.replace("[", "\\[")
+    s = s.replace("{", "\\{")
+    s = s.replace('"', '\\"')
+    s = s.replace("]", "\\]")
+    s = s.replace("}", "\\}")
+    return s
+
+
 root = tk.Tk()
 
 html = tk.StringVar(name="html")
@@ -21,6 +30,12 @@ author = tk.StringVar(name="author")
 hook = tk.StringVar(name="hook")
 posted = tk.StringVar(name="posted")
 
+
+def reset_comm_string(s):
+    root.tk.eval(".c.comm configure -state normal")
+    root.tk.eval(".c.comm delete 1.0 end")
+    root.tk.eval('.c.comm insert 1.0 "{}"'.format(quote(s)))
+    root.tk.eval(".c.comm configure -state disabled")
 
 def append_record():
     L = json.load(open("2021_articles_simple.json", "r", encoding="utf-8"))
@@ -33,8 +48,7 @@ def append_record():
     }
     L.append(D)
     json.dump(L, open("2021_articles_simple.json", "w", encoding="utf-8"), indent=2)
-    pprint.pprint(D)
-    print("(SAVED)")
+    reset_comm_string(pprint.pformat(D))
 
 
 root.tk.createcommand("appendrecord", append_record)
@@ -81,6 +95,10 @@ ttk::entry .c.posted -textvariable posted
 
 ttk::button .c.append -text "Append" -command appendrecord
 
+tk::text .c.comm -height 8
+.c.comm configure -state disabled
+
+
 grid .c.lblhtml -column 0 -row 0 -sticky e
 grid .c.lblraw -column 0 -row 1 -sticky e
 grid .c.lblauthor -column 0 -row 2 -sticky e
@@ -99,13 +117,16 @@ grid .c.posted -row 4 -column 1 -columnspan 3 -sticky ew
 
 grid .c.append -row 5 -column 0 -columnspan 4 -sticky e
 
+grid .c.comm -row 6 -column 0 -columnspan 4 -sticky nsew
+
 grid columnconfigure .c 0 -weight 0
 grid columnconfigure .c 1 -weight 1
 grid columnconfigure .c 2 -weight 1
 grid columnconfigure .c 3 -weight 1
 
+grid rowconfigure .c 6 -weight 1
+
 wm title . "Data Entry"
-wm resizable . 1 0
 
 set author lion
 
