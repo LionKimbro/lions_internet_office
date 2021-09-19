@@ -50,6 +50,7 @@ def on_focus():
     a, b = read_two_paths_from_clipboard()
     html.set(a)
     raw.set(b)
+    root.tk.eval("focus .c.hook")
 
 root.tk.createcommand("focusin", on_focus)
 
@@ -68,8 +69,8 @@ ttk::label .c.lblauthor -text "Author:"
 ttk::label .c.lblhook -text "Hook:"
 ttk::label .c.lblposted -text "Posted:"
 
-ttk::entry .c.html -textvariable html
-ttk::entry .c.raw -textvariable raw
+ttk::entry .c.html -textvariable html -width 125
+ttk::entry .c.raw -textvariable raw -width 125
 
 ttk::radiobutton .c.lion -text "lion" -variable author -value lion
 ttk::radiobutton .c.ciprian -text "ciprian" -variable author -value "ciprian.cracium"
@@ -105,6 +106,8 @@ grid columnconfigure .c 3 -weight 1
 
 wm title . "Data Entry"
 wm resizable . 1 0
+
+set author lion
 
 bind .c <FocusIn> {focusin}
 """)
