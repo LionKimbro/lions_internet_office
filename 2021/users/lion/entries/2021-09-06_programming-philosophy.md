@@ -23,6 +23,7 @@ Also, the intended audience for this document is people who have spent at 20 yea
 
 * ["Small Picture" Principles](#principles-small)
   * [Global Variables > Parameters](#global-variables)
+  * [Global Variables > Return Values](#globals-2)
   * [Probes > Tests](#probes)
   * [Integration > Interface](#integration)
   * [Let Promises Do Their Work](#promises)
@@ -313,6 +314,14 @@ For each global variable, I keep track of:
 The data dictionary is, very importantly, not a comment within the code-base.  It can be referenced from a comment in the code base, but it is not a comment within the code-base.  There is too much information that needs to be communicated about a variable, to neatly fit within the code as written.
 
 Essentially, the strategy is <a href="#discipline-in-the-mind">to take the security rules out of the programming language, and into the mind of the programmer.</a>
+
+### <a name="globals-2">Global Variables > Return Values</a>
+
+We've talked about parameters, but let's talk about return values, too.
+
+Before returning a value, you can ask yourself:  "Is there a canonical location that this value, the product of a function, could or should go?"
+
+If the value is not momentary and ephemeral -- the same kind of consideration as for "Is this a genuine parameter or not?" -- but is rather part of the developing context -- then do not return the calculation as a return value.  Rather, store the value in a globally accessible canonical location.  Then it can be referred to by anything that would use it, rather than having to daisy chain it from one point in the code to another.
 
 
 ### <a name="probes">Probes > Tests</a>

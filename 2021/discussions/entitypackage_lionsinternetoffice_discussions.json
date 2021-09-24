@@ -23,7 +23,8 @@
           "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-12",
           "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-13",
           "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-14",
-          "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-15"
+          "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-15",
+          "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-16"
         ]
       }
     ],
@@ -257,6 +258,19 @@
         "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-14_related-works.md",
         "HOOK": "works related to what we've been doing",
         "POSTED": "2021-09-14"
+      }
+    ],
+    "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-16": [
+      {
+        "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+        "$UID": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-16",
+        "AUTHORS": [
+          "tag:lionkimbro@gmail.com,2021:person:lion"
+        ],
+        "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-23_data-collecting-gui.pdf",
+        "RAW": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-23_data-collecting-gui.pdf",
+        "HOOK": "PDF of Lion's Data Collecting GUI (design proposal)",
+        "POSTED": "2021-09-23"
       }
     ]
   },
