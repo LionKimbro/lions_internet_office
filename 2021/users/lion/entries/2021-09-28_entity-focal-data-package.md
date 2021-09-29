@@ -3,6 +3,7 @@
 
 Lion Kimbro
 2021-09-28
+Status: Still working on this document; Consider it frozen after 2021-10-10, unless I update this end-date before that time.
 
 This document outlines further development of [the idea I explored on Sep 13.](2021-09-13_entity-focal-data-package.md)
 
@@ -40,7 +41,7 @@ The remainder of this document describes the core ideas, the format, some reason
 * [Reasons](#reasons)
 	* [Why JSON?  What's wrong with Triples?](#whyjson)
 * [Open Questions](#questions)
-	* [Should Links be specially modelled?](#modellinks)
+	* [How do I model links?](#modellinks)
 	* [Should Identifiers be specially noted?](#noteidentifiers)
 * [Ambitions](#ambitions) -- and also, your invitation to engagement
 
@@ -483,14 +484,34 @@ But in the mean-time, we are not there.  We are still pulling bricks by hand, an
 ## <a name="questions">Open Questions</a>
 
 A number of questions come to me.
-* [Should Links be specially modelled?](#modellinks)
+* [How Do I Model Links](#modellinks) -- also, "Does the multiple-schema idea really work?"
 * [Should Identifiers be specially noted?](#noteidentifiers)
 
-## <a name="modellinks">Should Links be Specially Modelled?</a>
+## <a name="modellinks">How Do I Model Links?</a>
 
-So I said above that [Links are Entities](#linksareentities).  Still, I wonder if Ciprian, and various other thinkers, including the Triple people, are on to something.
+(Post-scripted:  I get there by way of: "Does the multiple-schema idea really work?"  Hang with this for a moment.)
 
-So I still ask myself this question.
+I think I included the idea of multiple-schema with a sort of compromise with Ciprian in mind.  That said, I'm not sure it's really a good idea.
+
+Here's the root of the problem:
+* Ciprian wants links to be general and interpretable in a data browser.  If you have general link types, then even if you don't have the specifics of the link worked out (perhaps you can't load the schema, or the schema doesn't exist yet,) you can still make out in the browser that there is a kind of link between two entities.  I agree that that sounds really great, and so yeah -- let's include some basic link types.
+* On the other hand, I'm slightly skeptical of "links between entities," in the abstract.  I am more inclined to have a JSON data structure, and a value to some key, or a value in some list, is an identifier that points to another entity.  That gives the links "positioning" within the JSON data structure (as a value of a key, as a value with an index within a list,) which is more natural to conventional programming, and carries meaning by context, which would otherwise have to be specified somehow in the "links between entities" paradigm.
+
+I figured that allowing entity data to have multiple schema would help solve this problem.  But it doesn't.  It fails, because (for example) a piece of entity data can only have a single left-right link relationship, now.
+
+So how do I model links?
+
+Are links embedded in the Entity Data, with that rich positional data, but not abstractly recognizable by a browser?
+
+Or are links their own entity data, annotating entities abstractly?
+
+Is there a way that I can get the best of both worlds -- links positioned within the JSON data, but also abstractly recognizable by a browser or a query system?
+
+Perhaps just manually specify *both*?  Or perhaps a schema annotation can declare how to produce links information from entity data?
+
+I am turned off by the idea of pushing positioning information into purely abstract links.  "This is a link between a feed and an article.  The article has ordinality 34 -- it's the 34th article in the feed."  That seems really ugly to me -- it feels like the most ordinary way of representing articles, is simply to list the article identifiers in a list within the feed.  That's what people would expect, that's what people would use, that's what people would like to read and write.
+
+So this seems like a sort of fundamental problem, and I've already written notes towards an article on specifically this problem, which, if time and luck coincide, I will write up and hope that I remember to link to from here.
 
 ## <a name="noteidentifiers">Should Identifiers be specially noted?</a>
 
@@ -541,13 +562,21 @@ In it, I specified these principles:
 And then I wrote the following:
 
 > This is my picture of my efforts on networked data exploration for the next 2 years.
+> 
 > This is not a commitment; It's not even a statement of intent; Rather, -- it's just what I envision could be in the next 2 years, after an hour of thinking about it.
+> 
 > I am very ADHD, and tend to move "from thing to thing." I am also a foundational pillar of [the Star Community,](http://star-community.org/) which is the first priority in my life, and then I have a job, which is an important priority, and then there are also relationships that are precious to me.
+> 
 > So, this is not "my life's effort," -- rather, this is something that I do for fun. But I also take it seriously and hope that it can be a serious contribution.
+> 
 > So in Principles, I wrote "ADHD/Fun > Ambition,"
+> 
 > But I also added "Ambition > Who Cares." I'd like to treat this project responsibly.
+> 
 > If I should be so fortunate that this should should grow to be something bigger, I'll start looking for replacements for myself who take on the responsibility.
+> 
 > I want to keep this broader than EntityPkg. I am very intrigued by Ciprian's lines of thought, even when I do not agree with them myself, so I would like to have a "Big Tent" approach to data formats and such.
+> 
 > If I should be so fortunate that a community develops around this exploration of networked data formats, then I would like it to carry several different data concepts in its midst.
 
 I find "semantic web" and "networked data" ideas fun, and worthy of exploration.  This represents my exploration.
