@@ -366,7 +366,12 @@
       "$schema": "tag:entitypkg.net,2022:entity-schema:source-v1",
       "$eid": "tag:lionkimbro@gmail.com,2021:entity-schema:article-to-author-v1",
       "source": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/data/entitypackage_experimentalfeeds.json"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:entitypkg.net,2022:entity-schema:source-v1",
+      "$eid": "tag:entitypkg.net,2022:entity-schema:source-v1",
+      "source": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/data/entitypackage_basics.json"
     }
   ]
 }
-

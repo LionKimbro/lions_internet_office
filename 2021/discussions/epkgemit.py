@@ -329,7 +329,9 @@ def create_lions_internet_office_articles_entitypkg():
 
     # 4. sources
 
-    for schema in all_schema():
+    L = all_schema()
+    L.append(SCH_SOURCE)
+    for schema in L:
         push()
         set("EID", schema)
         set("SOURCE", basic_info["sources"][get("EID")])
