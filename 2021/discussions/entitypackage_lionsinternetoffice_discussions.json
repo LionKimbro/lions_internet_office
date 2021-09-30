@@ -1,308 +1,372 @@
 {
-  "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:entity-package-v1",
-  "$UID": "tag:lionkimbro@gmail.com,2021:entity-package:lions-internet-office-discussions-v1",
-  "ENTITIES": {
-    "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:feed": [
-      {
-        "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:article-feed-v1",
-        "$UID": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:feed",
-        "TITLE": "Lion's Internet Office -- Discussions Feed",
-        "ARTICLES": [
-          "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-0",
-          "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-1",
-          "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-2",
-          "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-3",
-          "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-4",
-          "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-5",
-          "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-6",
-          "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-7",
-          "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-8",
-          "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-9",
-          "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-10",
-          "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-11",
-          "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-12",
-          "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-13",
-          "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-14",
-          "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-15",
-          "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-16",
-          "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-17"
-        ]
-      }
-    ],
-    "tag:lionkimbro@gmail.com,2021:person:lion": [
-      {
-        "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:generic-v1",
-        "$UID": "tag:lionkimbro@gmail.com,2021:person:lion",
-        "TITLE": "Lion Kimbro",
-        "TYPE": "a person"
-      }
-    ],
-    "tag:lionkimbro@gmail.com,2021:person:ciprian.cracium": [
-      {
-        "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:generic-v1",
-        "$UID": "tag:lionkimbro@gmail.com,2021:person:lion",
-        "TITLE": "Ciprian Cracium",
-        "TYPE": "a person"
-      }
-    ],
-    "tag:lionkimbro@gmail.com,2021:person:bouncepaw": [
-      {
-        "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:generic-v1",
-        "$UID": "tag:lionkimbro@gmail.com,2021:person:bouncepaw",
-        "TITLE": "BouncePaw",
-        "TYPE": "a person"
-      }
-    ],
-    "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-0": [
-      {
-        "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
-        "$UID": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-0",
-        "AUTHORS": [
-          "tag:lionkimbro@gmail.com,2021:person:lion"
-        ],
-        "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-05_about-me.md",
-        "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-05_about-me.md",
-        "HOOK": "about Lion Kimbro",
-        "POSTED": "2021-09-05"
-      }
-    ],
-    "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-1": [
-      {
-        "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
-        "$UID": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-1",
-        "AUTHORS": [
-          "tag:lionkimbro@gmail.com,2021:person:ciprian.cracium"
-        ],
-        "HTML": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/6697ebb3.html",
-        "RAW": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/6697ebb3.txt",
-        "HOOK": "storing tree structures on file systems",
-        "POSTED": "2021-09-05"
-      }
-    ],
-    "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-2": [
-      {
-        "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
-        "$UID": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-2",
-        "AUTHORS": [
-          "tag:lionkimbro@gmail.com,2021:person:lion"
-        ],
-        "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-06_programming-philosophy.md",
-        "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-06_programming-philosophy.md",
-        "HOOK": "Lion's programming philosophy",
-        "POSTED": "2021-09-06"
-      }
-    ],
-    "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-3": [
-      {
-        "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
-        "$UID": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-3",
-        "AUTHORS": [
-          "tag:lionkimbro@gmail.com,2021:person:lion"
-        ],
-        "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-06_revision-to-article-posting-system.md",
-        "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-06_revision-to-article-posting-system.md",
-        "HOOK": "Revision to the Article Posting System",
-        "POSTED": "2021-09-06"
-      }
-    ],
-    "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-4": [
-      {
-        "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
-        "$UID": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-4",
-        "AUTHORS": [
-          "tag:lionkimbro@gmail.com,2021:person:lion"
-        ],
-        "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-07_exomarkup.md",
-        "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-07_exomarkup.md",
-        "HOOK": "exo-Markup HTML Generation",
-        "POSTED": "2021-09-07"
-      }
-    ],
-    "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-5": [
-      {
-        "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
-        "$UID": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-5",
-        "AUTHORS": [
-          "tag:lionkimbro@gmail.com,2021:person:ciprian.cracium"
-        ],
-        "HTML": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/4a56cfca.html",
-        "RAW": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/4a56cfca.txt",
-        "HOOK": "the ... trick for local naming",
-        "POSTED": "2021-09-08"
-      }
-    ],
-    "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-6": [
-      {
-        "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
-        "$UID": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-6",
-        "AUTHORS": [
-          "tag:lionkimbro@gmail.com,2021:person:lion"
-        ],
-        "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-08_update-communications-mechanisms.md",
-        "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-08_update-communications-mechanisms.md",
-        "HOOK": "Update Communication Mechanisms",
-        "POSTED": "2021-09-08"
-      }
-    ],
-    "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-7": [
-      {
-        "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
-        "$UID": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-7",
-        "AUTHORS": [
-          "tag:lionkimbro@gmail.com,2021:person:ciprian.cracium"
-        ],
-        "HTML": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/1ab930b7.html",
-        "RAW": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/1ab930b7.txt",
-        "HOOK": "entities and links in data serialization formats",
-        "POSTED": "2021-09-09"
-      }
-    ],
-    "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-8": [
-      {
-        "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
-        "$UID": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-8",
-        "AUTHORS": [
-          "tag:lionkimbro@gmail.com,2021:person:bouncepaw"
-        ],
-        "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/bouncepaw/entries/2021-09-10-canon-cat.md",
-        "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/bouncepaw/entries/2021-09-10-canon-cat.md",
-        "HOOK": "Good Things about Canon Cat",
-        "POSTED": "2021-09-10"
-      }
-    ],
-    "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-9": [
-      {
-        "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
-        "$UID": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-9",
-        "AUTHORS": [
-          "tag:lionkimbro@gmail.com,2021:person:ciprian.cracium"
-        ],
-        "HTML": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/19817cd9.html",
-        "RAW": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/19817cd9.txt",
-        "HOOK": "data as code; Universal Data 1 (UD1)",
-        "POSTED": "2021-09-11"
-      }
-    ],
-    "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-10": [
-      {
-        "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
-        "$UID": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-10",
-        "AUTHORS": [
-          "tag:lionkimbro@gmail.com,2021:person:bouncepaw"
-        ],
-        "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/bouncepaw/entries/2021-09-11-patchouli.rest",
-        "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/bouncepaw/entries/2021-09-11-patchouli.rest",
-        "HOOK": "Patchouli",
-        "POSTED": "2021-09-11"
-      }
-    ],
-    "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-11": [
-      {
-        "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
-        "$UID": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-11",
-        "AUTHORS": [
-          "tag:lionkimbro@gmail.com,2021:person:lion"
-        ],
-        "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-12_nlsd_alphabet.md",
-        "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-12_nlsd_alphabet.md",
-        "HOOK": "NLSD Alphabet",
-        "POSTED": "2021-09-12"
-      }
-    ],
-    "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-12": [
-      {
-        "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
-        "$UID": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-12",
-        "AUTHORS": [
-          "tag:lionkimbro@gmail.com,2021:person:lion"
-        ],
-        "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-13_entity-focal-data-package.md",
-        "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-13_entity-focal-data-package.md",
-        "HOOK": "Entity-Focal Data Package (2021-09-13 version)",
-        "POSTED": "2021-09-13"
-      }
-    ],
-    "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-13": [
-      {
-        "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
-        "$UID": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-13",
-        "AUTHORS": [
-          "tag:lionkimbro@gmail.com,2021:person:lion"
-        ],
-        "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-13_the-generic-thing.md",
-        "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-13_the-generic-thing.md",
-        "HOOK": "The Generic Thing",
-        "POSTED": "2021-09-13"
-      }
-    ],
-    "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-14": [
-      {
-        "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
-        "$UID": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-14",
-        "AUTHORS": [
-          "tag:lionkimbro@gmail.com,2021:person:ciprian.cracium"
-        ],
-        "HTML": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/58cdcdcd.html",
-        "RAW": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/58cdcdcd.txt",
-        "HOOK": "imagining a universal wiki intermediary",
-        "POSTED": "2021-09-13"
-      }
-    ],
-    "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-15": [
-      {
-        "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
-        "$UID": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-15",
-        "AUTHORS": [
-          "tag:lionkimbro@gmail.com,2021:person:lion"
-        ],
-        "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-14_related-works.md",
-        "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-14_related-works.md",
-        "HOOK": "works related to what we've been doing",
-        "POSTED": "2021-09-14"
-      }
-    ],
-    "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-16": [
-      {
-        "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
-        "$UID": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-16",
-        "AUTHORS": [
-          "tag:lionkimbro@gmail.com,2021:person:lion"
-        ],
-        "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-23_data-collecting-gui.pdf",
-        "RAW": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-23_data-collecting-gui.pdf",
-        "HOOK": "PDF of Lion's Data Collecting GUI (design proposal)",
-        "POSTED": "2021-09-23"
-      }
-    ],
-    "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-17": [
-      {
-        "$SCHEMA": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
-        "$UID": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-17",
-        "AUTHORS": [
-          "tag:lionkimbro@gmail.com,2021:person:lion"
-        ],
-        "HTML": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-28_entity-focal-data-package.md",
-        "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-28_entity-focal-data-package.md",
-        "HOOK": "Entity-Focal Data Package (2021-09-28 version)",
-        "POSTED": "2021-09-28"
-      }
-    ]
-  },
-  "MOREINFO": [
+  "$eid": "tag:lionkimbro@gmail.com,2021:entity-package:lions-internet-office-discussions-v1",
+  "blocks": [
     {
-      "SOURCE": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/data/entitypackage_basics.json",
-      "DESCRIBES": [
-        "tag:lionkimbro@gmail.com,2021:entity-schema:schema-v1",
-        "tag:lionkimbro@gmail.com,2021:entity-schema:entity-package-v1",
-        "tag:lionkimbro@gmail.com,2021:entity-schema:generic-v1"
+      "$type": "data",
+      "$schema": "tag:entitypkg.net,2022:entity-schema:generic-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:feed",
+      "title": "Lion's Internet Office -- Discussions Feed",
+      "type": "a feed"
+    },
+    {
+      "$type": "link",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:feed-to-articles-v1",
+      "$eid": "urn:uuid:c9b42c09-758c-49e8-8a82-b5bfcb350f40",
+      "feed": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:feed",
+      "articles": [
+        "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-0",
+        "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-1",
+        "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-2",
+        "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-3",
+        "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-4",
+        "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-5",
+        "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-6",
+        "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-7",
+        "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-8",
+        "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-9",
+        "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-10",
+        "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-11",
+        "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-12",
+        "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-13",
+        "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-14",
+        "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-15",
+        "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-16",
+        "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-17"
       ]
     },
     {
-      "SOURCE": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/data/entitypackage_experimentalfeeds.json",
-      "DESCRIBES": [
-        "tag:lionkimbro@gmail.com,2021:entity-schema:article-feed-v1",
-        "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1"
-      ]
+      "$type": "data",
+      "$schema": "tag:entitypkg.net,2022:entity-schema:generic-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:person:lion",
+      "title": "Lion Kimbro",
+      "type": "a person"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:entitypkg.net,2022:entity-schema:generic-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:person:ciprian.cracium",
+      "title": "Ciprian Cracium",
+      "type": "a person"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:entitypkg.net,2022:entity-schema:generic-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:person:bouncepaw",
+      "title": "(alias: bouncepaw)",
+      "type": "a person"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-0",
+      "html": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-05_about-me.md",
+      "raw": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-05_about-me.md",
+      "hook": "about Lion Kimbro",
+      "posted": "2021-09-05"
+    },
+    {
+      "$type": "link",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-to-author-v1",
+      "$eid": "urn:uuid:12ad4b6a-f876-40c9-8c00-a73472f8f07c",
+      "article": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-0",
+      "author": "tag:lionkimbro@gmail.com,2021:person:lion"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-1",
+      "html": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/6697ebb3.html",
+      "raw": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/6697ebb3.txt",
+      "hook": "storing tree structures on file systems",
+      "posted": "2021-09-05"
+    },
+    {
+      "$type": "link",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-to-author-v1",
+      "$eid": "urn:uuid:36ed9fb7-2d88-49bc-a141-08b95195590e",
+      "article": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-1",
+      "author": "tag:lionkimbro@gmail.com,2021:person:ciprian.cracium"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-2",
+      "html": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-06_programming-philosophy.md",
+      "raw": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-06_programming-philosophy.md",
+      "hook": "Lion's programming philosophy",
+      "posted": "2021-09-06"
+    },
+    {
+      "$type": "link",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-to-author-v1",
+      "$eid": "urn:uuid:2dcd19f6-5a52-49e7-be68-67dd4fcfb32f",
+      "article": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-2",
+      "author": "tag:lionkimbro@gmail.com,2021:person:lion"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-3",
+      "html": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-06_revision-to-article-posting-system.md",
+      "raw": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-06_revision-to-article-posting-system.md",
+      "hook": "Revision to the Article Posting System",
+      "posted": "2021-09-06"
+    },
+    {
+      "$type": "link",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-to-author-v1",
+      "$eid": "urn:uuid:94315f13-d6ef-40b5-9b79-78b2bf4aca13",
+      "article": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-3",
+      "author": "tag:lionkimbro@gmail.com,2021:person:lion"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-4",
+      "html": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-07_exomarkup.md",
+      "raw": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-07_exomarkup.md",
+      "hook": "exo-Markup HTML Generation",
+      "posted": "2021-09-07"
+    },
+    {
+      "$type": "link",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-to-author-v1",
+      "$eid": "urn:uuid:a0168762-271c-4fb1-ab39-bbda875cba7e",
+      "article": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-4",
+      "author": "tag:lionkimbro@gmail.com,2021:person:lion"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-5",
+      "html": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/4a56cfca.html",
+      "raw": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/4a56cfca.txt",
+      "hook": "the ... trick for local naming",
+      "posted": "2021-09-08"
+    },
+    {
+      "$type": "link",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-to-author-v1",
+      "$eid": "urn:uuid:b31132b1-9960-4a82-a4c9-29e545b93150",
+      "article": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-5",
+      "author": "tag:lionkimbro@gmail.com,2021:person:ciprian.cracium"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-6",
+      "html": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-08_update-communications-mechanisms.md",
+      "raw": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-08_update-communications-mechanisms.md",
+      "hook": "Update Communication Mechanisms",
+      "posted": "2021-09-08"
+    },
+    {
+      "$type": "link",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-to-author-v1",
+      "$eid": "urn:uuid:e9515190-3c2a-46d9-866b-c7c50c083d2d",
+      "article": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-6",
+      "author": "tag:lionkimbro@gmail.com,2021:person:lion"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-7",
+      "html": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/1ab930b7.html",
+      "raw": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/1ab930b7.txt",
+      "hook": "entities and links in data serialization formats",
+      "posted": "2021-09-09"
+    },
+    {
+      "$type": "link",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-to-author-v1",
+      "$eid": "urn:uuid:5be45c8b-467a-4a9f-816f-9dae0ed37d72",
+      "article": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-7",
+      "author": "tag:lionkimbro@gmail.com,2021:person:ciprian.cracium"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-8",
+      "html": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/bouncepaw/entries/2021-09-10-canon-cat.md",
+      "raw": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/bouncepaw/entries/2021-09-10-canon-cat.md",
+      "hook": "Good Things about Canon Cat",
+      "posted": "2021-09-10"
+    },
+    {
+      "$type": "link",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-to-author-v1",
+      "$eid": "urn:uuid:454d36c8-81e9-44a7-94ad-b0691753dde0",
+      "article": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-8",
+      "author": "tag:lionkimbro@gmail.com,2021:person:bouncepaw"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-9",
+      "html": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/19817cd9.html",
+      "raw": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/19817cd9.txt",
+      "hook": "data as code; Universal Data 1 (UD1)",
+      "posted": "2021-09-11"
+    },
+    {
+      "$type": "link",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-to-author-v1",
+      "$eid": "urn:uuid:e9b40317-cb29-41ef-8c43-f254729b3bc7",
+      "article": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-9",
+      "author": "tag:lionkimbro@gmail.com,2021:person:ciprian.cracium"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-10",
+      "html": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/bouncepaw/entries/2021-09-11-patchouli.rest",
+      "raw": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/bouncepaw/entries/2021-09-11-patchouli.rest",
+      "hook": "Patchouli",
+      "posted": "2021-09-11"
+    },
+    {
+      "$type": "link",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-to-author-v1",
+      "$eid": "urn:uuid:45f75fb0-a60b-4cb5-b3cb-e457fd466b58",
+      "article": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-10",
+      "author": "tag:lionkimbro@gmail.com,2021:person:bouncepaw"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-11",
+      "html": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-12_nlsd_alphabet.md",
+      "raw": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-12_nlsd_alphabet.md",
+      "hook": "NLSD Alphabet",
+      "posted": "2021-09-12"
+    },
+    {
+      "$type": "link",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-to-author-v1",
+      "$eid": "urn:uuid:ad8cd5a1-100f-400c-bc42-32f366fd92e9",
+      "article": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-11",
+      "author": "tag:lionkimbro@gmail.com,2021:person:lion"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-12",
+      "html": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-13_entity-focal-data-package.md",
+      "raw": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-13_entity-focal-data-package.md",
+      "hook": "Entity-Focal Data Package (2021-09-13 version)",
+      "posted": "2021-09-13"
+    },
+    {
+      "$type": "link",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-to-author-v1",
+      "$eid": "urn:uuid:9e34d6b5-b1ac-4183-81c6-6d0f1c250db2",
+      "article": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-12",
+      "author": "tag:lionkimbro@gmail.com,2021:person:lion"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-13",
+      "html": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-13_the-generic-thing.md",
+      "raw": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-13_the-generic-thing.md",
+      "hook": "The Generic Thing",
+      "posted": "2021-09-13"
+    },
+    {
+      "$type": "link",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-to-author-v1",
+      "$eid": "urn:uuid:57cafab4-d9e7-4b97-8e06-3b3d585b5834",
+      "article": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-13",
+      "author": "tag:lionkimbro@gmail.com,2021:person:lion"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-14",
+      "html": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/58cdcdcd.html",
+      "raw": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/58cdcdcd.txt",
+      "hook": "imagining a universal wiki intermediary",
+      "posted": "2021-09-13"
+    },
+    {
+      "$type": "link",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-to-author-v1",
+      "$eid": "urn:uuid:9941405f-6592-49cb-98b6-e53bac419547",
+      "article": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-14",
+      "author": "tag:lionkimbro@gmail.com,2021:person:ciprian.cracium"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-15",
+      "html": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-14_related-works.md",
+      "raw": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-14_related-works.md",
+      "hook": "works related to what we've been doing",
+      "posted": "2021-09-14"
+    },
+    {
+      "$type": "link",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-to-author-v1",
+      "$eid": "urn:uuid:77f1b161-9c11-42d3-9982-7545eb0c4ed1",
+      "article": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-15",
+      "author": "tag:lionkimbro@gmail.com,2021:person:lion"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-16",
+      "html": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-23_data-collecting-gui.pdf",
+      "raw": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-23_data-collecting-gui.pdf",
+      "hook": "PDF of Lion's Data Collecting GUI (design proposal)",
+      "posted": "2021-09-23"
+    },
+    {
+      "$type": "link",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-to-author-v1",
+      "$eid": "urn:uuid:37709eb5-c7f2-4163-ae7f-78984f9ff3f8",
+      "article": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-16",
+      "author": "tag:lionkimbro@gmail.com,2021:person:lion"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-17",
+      "html": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-09-28_entity-focal-data-package.md",
+      "raw": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-09-28_entity-focal-data-package.md",
+      "hook": "Entity-Focal Data Package (2021-09-28 version)",
+      "posted": "2021-09-28"
+    },
+    {
+      "$type": "link",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-to-author-v1",
+      "$eid": "urn:uuid:1ae5fbc0-cbbe-4f30-be90-4786d628808c",
+      "article": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-17",
+      "author": "tag:lionkimbro@gmail.com,2021:person:lion"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:entitypkg.net,2022:entity-schema:source-v1",
+      "$eid": "tag:entitypkg.net,2022:entity-schema:generic-v1",
+      "source": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/data/entitypackage_basics.json"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:entitypkg.net,2022:entity-schema:source-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:entity-schema:feed-to-articles-v1",
+      "source": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/data/entitypackage_experimentalfeeds.json"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:entitypkg.net,2022:entity-schema:source-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+      "source": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/data/entitypackage_experimentalfeeds.json"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:entitypkg.net,2022:entity-schema:source-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:entity-schema:article-to-author-v1",
+      "source": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/data/entitypackage_experimentalfeeds.json"
     }
   ]
 }
+

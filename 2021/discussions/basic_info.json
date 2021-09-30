@@ -1,0 +1,70 @@
+{
+    "short-names": {
+        "#people": null,
+        "lion": "tag:lionkimbro@gmail.com,2021:person:lion",
+        "ciprian.cracium": "tag:lionkimbro@gmail.com,2021:person:ciprian.cracium",
+        "bouncepaw": "tag:lionkimbro@gmail.com,2021:person:bouncepaw",
+
+        "#schema": null,
+        "sch_source": "tag:entitypkg.net,2022:entity-schema:source-v1",
+        "sch_generic": "tag:entitypkg.net,2022:entity-schema:generic-v1",
+
+        "#packages": null,
+        "pkg_feed": "tag:lionkimbro@gmail.com,2021:entity-package:lions-internet-office-discussions-v1",
+
+        "#feed-related": null,
+        "feed": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:feed",
+        "article-prefix": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-",
+        "link_feed_to_articles": "urn:uuid:c9b42c09-758c-49e8-8a82-b5bfcb350f40",
+
+        "#feed-schema": null,
+        "sch_article": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+        "sch_feed_to_articles": "tag:lionkimbro@gmail.com,2021:entity-schema:feed-to-articles-v1",
+        "sch_article_author": "tag:lionkimbro@gmail.com,2021:entity-schema:article-to-author-v1",
+
+        "#files-by-internet": null,
+        "basics.json": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/data/entitypackage_basics.json",
+        "experimentalfeeds.json": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/data/entitypackage_experimentalfeeds.json"
+    },
+    "sources": {
+        "sch_source": "basics.json",
+        "sch_generic": "basics.json",
+        "sch_article": "experimentalfeeds.json",
+        "sch_feed_to_articles": "experimentalfeeds.json",
+        "sch_article_author": "experimentalfeeds.json"
+    },
+    "people": [
+        {"TITLE": "Lion Kimbro",
+         "EID": "lion"},
+        {"TITLE": "Ciprian Cracium",
+         "EID": "ciprian.cracium"},
+        {"TITLE": "(alias: bouncepaw)",
+         "EID": "bouncepaw"}
+    ],
+    "listing-order": [
+        {"schema": "sch_source",
+         "order": ["$type", "$schema", "$eid", "source"]},
+        {"schema": "sch_generic",
+         "order": ["$type", "$schema", "$eid", "title", "type"]},
+        {"schema": "sch_article",
+         "order": ["$type", "$schema", "$eid", "html", "raw", "hook", "posted"]},
+        {"schema": "sch_feed_to_articles",
+         "order": ["$type", "$schema", "$eid", "feed", "articles"]},
+        {"schema": "sch_article_author",
+         "order": ["$type", "$schema", "$eid", "article", "author"]}
+    ],
+    "package": {
+        "PACKAGE_EID": "pkg_feed"
+    },
+    "feed": {
+        "SCHEMA": "sch_generic",
+        "EID": "feed",
+        "TITLE": "Lion's Internet Office -- Discussions Feed"
+    },
+    "paths": {
+        "in_articles": "2021_articles_simple.json",
+        "out_articles": "entitypackage_lionsinternetoffice_discussions.json",
+        "inout_uuids": "2021_uuids.json"
+    }
+}
+
