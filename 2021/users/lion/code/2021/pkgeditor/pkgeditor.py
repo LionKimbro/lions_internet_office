@@ -1,5 +1,9 @@
 
+
+import hashlib
 import tkinter as tk
+import filetalk
+
 
 root = tk.Tk()
 
@@ -35,26 +39,34 @@ grid rowconfigure . 1 -weight 6
 grid columnconfigure . 0 -weight 9
 grid columnconfigure . 2 -weight 15
 
-bind . <Return> {calculate}
+bind . <Return> {entercmd}
 
-proc calculate {} {
+proc entercmd {} {
   .text configure -state normal
   .text insert end $::entry entryinput
   .text insert end "\n"
   .text yview moveto 1.0
-  python_calc
+  python_entercmd
   .text configure -state disabled
   set ::entry {}
 }
 """)
 
-def calc():
+def entercmd():
     if entry.get() in {"q", "quit", "exit", "x"}:
         root.destroy()
     else:
         root.tk.eval('.text insert end "additional text\n"')
 
-root.tk.createcommand("python_calc", calc)
+root.tk.createcommand("python_entercmd", entercmd)
+
+
+hash = lambda s: hashlib.blake2s(s).hexdigets()
+
+def populate():
+    URL = "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/discussions/entitypackage_lionsinternetoffice_discussions.json"
+    pkg = filetalk.dig("get json", loc=URL, base_path=None)
+
 
 root.mainloop()
 
