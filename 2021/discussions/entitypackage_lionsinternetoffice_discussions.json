@@ -1,6 +1,7 @@
 {
-  "$eid": "tag:lionkimbro@gmail.com,2021:entity-package:lions-internet-office-discussions-v1",
-  "blocks": [
+  "$filetype": "tag:entitypkg.net,2022:file-type:package-v1",
+  "$pkgid": "tag:lionkimbro@gmail.com,2021:entity-package:lions-internet-office-discussions-v1",
+  "$blocks": [
     {
       "$type": "data",
       "$schema": "tag:entitypkg.net,2022:entity-schema:generic-v1",
@@ -31,7 +32,8 @@
         "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-14",
         "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-15",
         "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-16",
-        "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-17"
+        "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-17",
+        "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-18"
       ]
     },
     {
@@ -341,6 +343,22 @@
       "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-to-author-v1",
       "$eid": "urn:uuid:1ae5fbc0-cbbe-4f30-be90-4786d628808c",
       "article": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-17",
+      "author": "tag:lionkimbro@gmail.com,2021:person:lion"
+    },
+    {
+      "$type": "data",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-v1",
+      "$eid": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-18",
+      "html": "https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-10-02_linking-from-multiple-perspectives.md",
+      "raw": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-10-02_linking-from-multiple-perspectives.md",
+      "hook": "Linking from Multiple Perspectives",
+      "posted": "2021-10-02"
+    },
+    {
+      "$type": "link",
+      "$schema": "tag:lionkimbro@gmail.com,2021:entity-schema:article-to-author-v1",
+      "$eid": "urn:uuid:8e16c75a-4bbd-4146-89bf-0de49a56888e",
+      "article": "tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:post-18",
       "author": "tag:lionkimbro@gmail.com,2021:person:lion"
     },
     {
