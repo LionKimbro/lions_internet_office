@@ -49,7 +49,14 @@ LISTINGORDER = "LISTINGORDER"  # currently selected listing order list
 g = {LISTINGORDER: None}
 
 
-# Constants -- Common Keys
+# Constants -- Package Files
+
+K_FILETYPE = "$filetype"
+K_PKGID = "$pkgid"
+K_BLOCKS = "$blocks"
+
+
+# Constants -- Blocks
 
 K_SCHEMA = "$schema"
 K_TYPE = "$type"
@@ -57,8 +64,6 @@ K_EID = "$eid"
 
 TYPE_LINK = "link"
 TYPE_DATA = "data"
-
-BLOCKS = "blocks"  # used in the package definition
 
 
 # Constants -- Tag Authorities
@@ -128,8 +133,9 @@ pkg = {}  # The package being assembled.
 
 def package():  # req: PACKAGE_EID
     pkg.clear()
-    pkg.update({K_EID: get("PACKAGE_EID"),
-                BLOCKS: []})
+    pkg.update({K_FILETYPE: longname("filetype_pkg"),
+                K_PKGID: get("PKGID"),
+                K_BLOCKS: []})
 
 def show():
     pprint.pprint(pkg)
@@ -149,7 +155,7 @@ def add():  # add the listing block to the package, then clear it
     cue_listing_order()  # order the keys, referencing the schema
     for k in g[LISTINGORDER]:
         D[k] = content[k]
-    pkg[BLOCKS].append(D)
+    pkg[K_BLOCKS].append(D)
     content.clear()
 
 
@@ -216,7 +222,7 @@ def source():  # req: EID (the thing), SOURCE (where to find it)
 
 def all_schema():
     seen = []
-    for block in pkg[BLOCKS]:
+    for block in pkg[K_BLOCKS]:
         if K_SCHEMA in block:
             s = block[K_SCHEMA]
             if s not in seen:
@@ -235,7 +241,7 @@ def all_eid():
     This is part of locating candidates for moreinfo.
     """
     seen = {pkg[K_EID]}
-    for block in pkg[BLOCKS]:
+    for block in pkg[K_BLOCKS]:
         if K_EID in block:
             seen.add(block[K_EID])
         if block[K_TYPE] == TYPE_LINK:
@@ -290,6 +296,7 @@ def stored_uuid(key, for_identifier):
 
 def create_lions_internet_office_articles_entitypkg():
     # Create Package
+    breakpoint()
     push(basic_info["package"]); package(); pop()
 
     # 1. feed
@@ -347,4 +354,8 @@ def create_lions_internet_office_articles_entitypkg():
 
 def run():
     create_lions_internet_office_articles_entitypkg()
+
+
+if __name__ == "__main__":
+    run()
 

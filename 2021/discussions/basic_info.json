@@ -5,6 +5,9 @@
         "ciprian.cracium": "tag:lionkimbro@gmail.com,2021:person:ciprian.cracium",
         "bouncepaw": "tag:lionkimbro@gmail.com,2021:person:bouncepaw",
 
+        "#file-type": null,
+        "filetype_pkg": "tag:entitypkg.net,2022:file-type:package-v1",
+        
         "#schema": null,
         "sch_source": "tag:entitypkg.net,2022:entity-schema:source-v1",
         "sch_generic": "tag:entitypkg.net,2022:entity-schema:generic-v1",
@@ -54,7 +57,7 @@
          "order": ["$type", "$schema", "$eid", "article", "author"]}
     ],
     "package": {
-        "PACKAGE_EID": "pkg_feed"
+        "PKGID": "pkg_feed"
     },
     "feed": {
         "SCHEMA": "sch_generic",
