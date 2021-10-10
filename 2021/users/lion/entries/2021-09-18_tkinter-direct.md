@@ -301,3 +301,11 @@ For a conclusion, I just want to restate what I think are the three primary bene
 If you should agree, I encourage you to explore this technique.
 
 If this technique becomes popular enough, it might warrant creating an alternative tcl/tk wrapper that features only the minimum functionality required to support this mode of interaction.
+
+
+## <a name="seealso">See Also</a>
+
+* wiki.tcl-lang.org
+  * [Python-Tcl Interactions](https://wiki.tcl-lang.org/page/Python-Tcl-Interactions)
+  * [Accessing Tcl and Python from one another](https://wiki.tcl-lang.org/page/Accessing+Tcl+and+Python+from+one+another)
+

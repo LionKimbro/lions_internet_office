@@ -3,7 +3,7 @@
 
 Lion Kimbro
 2021-09-28
-Status: Still working on this document; Consider it frozen after 2021-10-10, unless I update this end-date before that time.
+Status: Complete, Obsolete (but Still Useful) (marked 2021-10-09; see [addendum](#addendum-2021-10-09))
 
 This document outlines further development of [the idea I explored on Sep 13.](2021-09-13_entity-focal-data-package.md)
 
@@ -16,6 +16,24 @@ I am doing this in frequent collaboration with a man who I know by the handle `c
 We are presently looking for interested collaborators -- whether that is implementing, or simply kicking the can around, or whatever form of engagement -- we are looking for interested collaborators.
 
 The remainder of this document describes the core ideas, the format, some reasonings about why I made certain decisions, and some open questions.  Depending on whether I peter out or not, I may write a bit about the ambitions of the project.
+
+## <a name="addendum-2021-10-09">(Addendum 2021-10-09)</a>
+
+It's been a couple of weeks since I wrote this, and the format has changed in a small, but very important way:  Links and facets (what I called "data" before) are now segregated, and handled differently.
+
+I can't remember exactly how it happened, but am now completely pleased with the segregation.  I was talking with Ciprian Cracium, and I think I was trying to figure out how to extend JSON so that links could be identified within the data blocks.  "How do I distinguish a link, from merely naming a link?", I think was a question on my mind.  I think Ciprian mentioned that if links were separate from data, then all terminals in the block could be understood to be links.  That was the bingo moment for me, and it solved the other problem I had, which was wanting to be able to have links, but being able to position and structure them as well.  (You can read a bit about this in [2021-10-02_linking-from-multiple-perspectives.md](https://github.com/LionKimbro/lions_internet_office/blob/main/2021/users/lion/entries/2021-10-02_linking-from-multiple-perspectives.md).)
+
+So, now there is a `$type` field in each record, along with the `$schema` and the `$id`.
+
+I hope to break this down into smaller and more specific documents, and create a github repository for the Entity-Focal Data Package project as a whole.
+
+Most recent activity in interpretation has been through:
+* [the EntityLoader project](https://github.com/LionKimbro/entityloader) -- a Python loader for Entity-Focal Data Packages
+* [the file epkgemit.py in the Internet Office](https://github.com/LionKimbro/lions_internet_office/blob/main/2021/discussions/epkgemit.py) -- an example generator of content
+* [cipriancraciun/linked-entities-model/](https://github.com/cipriancraciun/linked-entities-model/) -- Ciprian's work on a Linked Entities data model
+
+As always, the best place to go is to [the Discord.](https://communitywiki.org/wiki/LionsInternetOffice)
+
 
 ## <a name="toc">Table of Contents</a>
 
@@ -281,7 +299,7 @@ Let's start with an example package file:
 {
   "$schema": ["tag:entitypkg.net,2022:entity-schema:entity-package-v1"],
   "$about": ["tag:lionkimbro@gmail.com,2021:entity-package:lions-internet-office-discussions-v1"],
-  "data": [
+  "$records": [
     {"$schema": ["tag:lionkimbro@gmail.com,2021:entity-schema:article-feed-v1",
                  "tag:entitypkg.net,2022:entity-schema:link:parent-child"],
      "$about": ["tag:lionkimbro@gmail.com,2021:lions-internet-office:feeds:discussions:feed"],
@@ -359,11 +377,11 @@ Let's start with an example package file:
 
 Here you can see that a package is a very simple thing.
 * It is kept in a JSON file.
-* It has three keys: `$schema`, `$eid`, and `data`.
+* It has three keys: `$schema`, `$eid`, and `$records`.
 * `$schema` is always `["tag:entitypkg.net,2022:entity-schema:entity-package-v1"]`.
 * `$eid` is always a list of identifiers that the package is known by.
 	* Almost always just a single identifier.
-* `data` is a list of entity data.
+* `$records` is a list of records.
 
 Entity data universally conforms to the following conventions:
 * `$schema` is always a list of entity identifiers, said entity being a schema.
