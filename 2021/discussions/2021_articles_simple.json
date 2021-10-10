@@ -131,5 +131,12 @@
     "RAW": "https://raw.githubusercontent.com/LionKimbro/lions_internet_office/main/2021/users/lion/entries/2021-10-02_linking-from-multiple-perspectives.md",
     "HOOK": "Linking from Multiple Perspectives",
     "POSTED": "2021-10-02"
+  },
+  {
+    "AUTHOR": "ciprian.cracium",
+    "HTML": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/32dc7f2e.html",
+    "RAW": "https://scratchpad.volution.ro/ciprian/992c7f2944456f18cdde77f683f49aa7/32dc7f2e.md",
+    "HOOK": "explorations in using FUSE to create an ephemeral file-system for protecting sensitive data stored in files",
+    "POSTED": "2021-10-10"
   }
 ]

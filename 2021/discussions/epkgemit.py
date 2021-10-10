@@ -6,8 +6,8 @@ This uses the Entity Package system developed around 2021-09-28,
 the characteristics of which include:
 
 * all-lower case keys
-* links & raw data separate
-* moreinfo is raw data
+* links & facets separate
+* moreinfo is a facet
 
 This module creates entity packages.
 """
@@ -53,17 +53,17 @@ g = {LISTINGORDER: None}
 
 K_FILETYPE = "$filetype"
 K_PKGID = "$pkgid"
-K_BLOCKS = "$blocks"
+K_RECORDS = "$records"
 
 
-# Constants -- Blocks
+# Constants -- Records
 
 K_SCHEMA = "$schema"
 K_TYPE = "$type"
-K_EID = "$eid"
+K_ID = "$id"
 
 TYPE_LINK = "link"
-TYPE_DATA = "data"
+TYPE_FACET = "facet"
 
 
 # Constants -- Tag Authorities
@@ -131,17 +131,17 @@ def liontag(datestr, content):
 
 pkg = {}  # The package being assembled.
 
-def package():  # req: PACKAGE_EID
+def package():  # req: PACKAGE_ID
     pkg.clear()
     pkg.update({K_FILETYPE: longname("filetype_pkg"),
                 K_PKGID: get("PKGID"),
-                K_BLOCKS: []})
+                K_RECORDS: []})
 
 def show():
     pprint.pprint(pkg)
 
 
-content = {}  # the content of a new data block
+content = {}  # the content of a new record
 
 def cue_listing_order():  # req: $SCHEMA
     for D in basic_info["listing-order"]:
@@ -150,102 +150,102 @@ def cue_listing_order():  # req: $SCHEMA
             return
     raise KeyError("cannot cue listing order:", content["$schema"])
 
-def add():  # add the listing block to the package, then clear it
+def add():  # add the listing record to the package, then clear it
     D = {}
     cue_listing_order()  # order the keys, referencing the schema
     for k in g[LISTINGORDER]:
         D[k] = content[k]
-    pkg[K_BLOCKS].append(D)
+    pkg[K_RECORDS].append(D)
     content.clear()
 
 
 # (these are position-based dictionary constructors)
-D_eid = lambda EID: locals()  # use with bind()
+D_id = lambda ID: locals()  # use with bind()
 D_schema = lambda SCHEMA: locals()
-D_schema_eid = lambda SCHEMA, EID: locals()
+D_schema_id = lambda SCHEMA, ID: locals()
 
-def schema_and_eid():  # req: EID, SCHEMA
-    content[K_EID] = get("EID")
+def schema_and_id():  # req: ID, SCHEMA
+    content[K_ID] = get("ID")
     content[K_SCHEMA] = get("SCHEMA")
     add()
 
-def data():  # req: EID, SCHEMA
-    content[K_TYPE] = TYPE_DATA
-    schema_and_eid()
+def facet():  # req: ID, SCHEMA
+    content[K_TYPE] = TYPE_FACET
+    schema_and_id()
 
-def link():  # req: EID, SCHEMA
+def link():  # req: ID, SCHEMA
     content[K_TYPE] = TYPE_LINK
-    schema_and_eid()
+    schema_and_id()
 
 
-def generic():  # req: EID, TITLE, TYPE
+def generic():  # req: ID, TITLE, TYPE
     set("SCHEMA", SCH_GENERIC)
     content["title"] = get("TITLE")
     content["type"] = get("TYPE")
-    data()
+    facet()
 
-def person():  # req: EID, TITLE
+def person():  # req: ID, TITLE
     set("TYPE", "a person")
     generic()
 
-def feed():  # req: EID, TITLE
+def feed():  # req: ID, TITLE
     set("TYPE", "a feed")
     generic()
 
-def feedlinks(articles):  # req: EID (for the link!!!), SCHEMA (link!), FEED eid
+def feedlinks(articles):  # req: ID (for the link!!!), SCHEMA (link!), FEED id
     content["feed"] = get("FEED")
-    content["articles"] = articles  # a list of eids of articles
+    content["articles"] = articles  # a list of ids of articles
     link()
 
-def article():  # req: EID, AUTHOR, HTML, RAW, HOOK, POSTED
+def article():  # req: ID, AUTHOR, HTML, RAW, HOOK, POSTED
     set("SCHEMA", SCH_ARTICLE)
-    # Remember, the author is a link, not entity data
+    # Remember, the author is noted via link, not a facet
     content["html"] = get("HTML")
     content["raw"] = get("RAW")
     content["hook"] = get("HOOK")
     content["posted"] = get("POSTED")
-    data()
+    facet()
 
-def article_author():  # req: EID (generally a UUID), an ARTICLE, and an AUTHOR
+def article_author():  # req: ID (generally a UUID), an ARTICLE, and an AUTHOR
     set("SCHEMA", SCH_ARTICLE_AUTHOR)
     content["article"] = get("ARTICLE")
     content["author"] = get("AUTHOR")
     link()
 
-def source():  # req: EID (the thing), SOURCE (where to find it)
+def source():  # req: ID (the thing), SOURCE (where to find it)
     set("SCHEMA", SCH_SOURCE)
     content["source"] = get("SOURCE")
-    data()
+    facet()
 
 
 # Functions -- Tracking Schema & Entity Identifiers
 
 def all_schema():
     seen = []
-    for block in pkg[K_BLOCKS]:
-        if K_SCHEMA in block:
-            s = block[K_SCHEMA]
+    for rec in pkg[K_RECORDS]:
+        if K_SCHEMA in rec:
+            s = rec[K_SCHEMA]
             if s not in seen:
                 seen.append(s)
     return seen
 
-def all_eid():
+def all_id():
     """Return all Entity Identifiers seen.
     
     That includes:
-    * the package EID
-    * the EID of each data block
-    * the EID of each link block
-    * all non-terminals in link blocks
+    * the package ID
+    * the ID of each facet record
+    * the ID of each link record
+    * all non-terminals in link records
     
     This is part of locating candidates for moreinfo.
     """
-    seen = {pkg[K_EID]}
-    for block in pkg[K_BLOCKS]:
-        if K_EID in block:
-            seen.add(block[K_EID])
-        if block[K_TYPE] == TYPE_LINK:
-            for terminal in all_linkblock_terminals(block):
+    seen = {pkg[K_ID]}
+    for rec in pkg[K_RECORDS]:
+        if K_ID in rec:
+            seen.add(rec[K_ID])
+        if rec[K_TYPE] == TYPE_LINK:
+            for terminal in all_linkrecord_terminals(rec):
                 seen.add(terminal)
 
 
@@ -260,22 +260,22 @@ def _helper_00(obj):
             seen.update(__helper_00(val))  # recurse in
     return seen
 
-def all_linkblock_terminals(block):
-    """Return all EID terminals for a link block.
+def all_linkrecord_terminals(rec):
+    """Return all ID terminals for a link record.
     
-    The special thing about link blocks, is that their terminals are
+    The special thing about link records, is that their terminals are
     ALL entity identifiers.
     
-    This function is a subroutine of all_eid, which needs to collect
-    the terminals from all link blocks, in order to inventory all
+    This function is a subroutine of all_id, which needs to collect
+    the terminals from all link records, in order to inventory all
     entity identifiers referenced.
     
     Note the following special keys:
     * K_SCHEMA ($schema)  -- INCLUDED (Entity Identifier)
     * K_TYPE ($type)  -- EXCLUDED (*not* an Entity Identifier)
-    * K_EID ($eid)  -- INCLUDED (Entity Identifier; namely: self)
+    * K_ID ($id)  -- INCLUDED (Entity Identifier; namely: self)
     """
-    D = dict(block)
+    D = dict(rec)
     del D[K_TYPE]
     return _helper_00(D)
 
@@ -303,17 +303,17 @@ def create_lions_internet_office_articles_entitypkg():
     
     # 1.A. generate the feed
     push(basic_info["feed"])
-    feedid = get("EID")  # save for when creating the feed-article link
+    feedid = get("ID")  # save for when creating the feed-article link
     feed()
     pop()
     
     # 1.B. Create sequential identifiers for the articles
     for (i, D) in enumerate(article_src):
-        D["EID"] = longname("article-prefix")+str(i)
+        D["ID"] = longname("article-prefix")+str(i)
     
     # 1.C. generate feed links
-    articles = [D["EID"] for D in article_src]
-    push({"EID": "link_feed_to_articles",
+    articles = [D["ID"] for D in article_src]
+    push({"ID": "link_feed_to_articles",
           "SCHEMA": "sch_feed_to_articles",
           "FEED": feedid})
     feedlinks(articles)
@@ -321,16 +321,16 @@ def create_lions_internet_office_articles_entitypkg():
 
     # 2. people
 
-    for person_data in basic_info["people"]:
-        push(person_data); person(); pop()
+    for person_info in basic_info["people"]:
+        push(person_info); person(); pop()
 
     # 3. articles
 
-    for article_data in article_src:
-        push(article_data)
+    for article_info in article_src:
+        push(article_info)
         article()
-        set("ARTICLE", get("EID"))  # keep the EID in ARTICLE when rendering the author link
-        set("EID", stored_uuid("article-to-author-uuids", get("ARTICLE")))
+        set("ARTICLE", get("ID"))  # keep the ID in ARTICLE when rendering the author link
+        set("ID", stored_uuid("article-to-author-uuids", get("ARTICLE")))
         article_author()
         pop()
 
@@ -340,8 +340,8 @@ def create_lions_internet_office_articles_entitypkg():
     L.append(SCH_SOURCE)
     for schema in L:
         push()
-        set("EID", schema)
-        set("SOURCE", basic_info["sources"][get("EID")])
+        set("ID", schema)
+        set("SOURCE", basic_info["sources"][get("ID")])
         source()
         pop()
     
