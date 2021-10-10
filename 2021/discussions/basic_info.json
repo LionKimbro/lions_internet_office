@@ -38,30 +38,30 @@
     },
     "people": [
         {"TITLE": "Lion Kimbro",
-         "EID": "lion"},
+         "ID": "lion"},
         {"TITLE": "Ciprian Cracium",
-         "EID": "ciprian.cracium"},
+         "ID": "ciprian.cracium"},
         {"TITLE": "(alias: bouncepaw)",
-         "EID": "bouncepaw"}
+         "ID": "bouncepaw"}
     ],
     "listing-order": [
         {"schema": "sch_source",
-         "order": ["$type", "$schema", "$eid", "source"]},
+         "order": ["$type", "$schema", "$id", "source"]},
         {"schema": "sch_generic",
-         "order": ["$type", "$schema", "$eid", "title", "type"]},
+         "order": ["$type", "$schema", "$id", "title", "type"]},
         {"schema": "sch_article",
-         "order": ["$type", "$schema", "$eid", "html", "raw", "hook", "posted"]},
+         "order": ["$type", "$schema", "$id", "html", "raw", "hook", "posted"]},
         {"schema": "sch_feed_to_articles",
-         "order": ["$type", "$schema", "$eid", "feed", "articles"]},
+         "order": ["$type", "$schema", "$id", "feed", "articles"]},
         {"schema": "sch_article_author",
-         "order": ["$type", "$schema", "$eid", "article", "author"]}
+         "order": ["$type", "$schema", "$id", "article", "author"]}
     ],
     "package": {
         "PKGID": "pkg_feed"
     },
     "feed": {
         "SCHEMA": "sch_generic",
-        "EID": "feed",
+        "ID": "feed",
         "TITLE": "Lion's Internet Office -- Discussions Feed"
     },
     "paths": {
