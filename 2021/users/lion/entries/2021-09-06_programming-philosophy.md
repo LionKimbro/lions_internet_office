@@ -4,6 +4,8 @@
 Lion's particular philosophy of programming.
 2021-09-06
 
+updated 2022-04-26: added big picture principle, [Fixed > Variable](#fixed)
+
 ## <a name="preface">Preface</a>
 
 This is a highly situated philosophy.  It's not intended for "all time"; rather, it reflects my immediate, situated, deeply personal position.
@@ -20,6 +22,7 @@ Also, the intended audience for this document is people who have spent at 20 yea
   * [Keep Strictures in the Mind, not the Code](#discipline-in-the-mind)
   * [Clear Ideas > "Code Reuse"](#ideas)
   * [Notation > Feature](#notation)
+  * [Fixed > Variable](#fixed)
 
 * ["Small Picture" Principles](#principles-small)
   * [Global Variables > Parameters](#global-variables)
@@ -147,6 +150,15 @@ And then an opening towards machinery:  Recognize that everything is a machine, 
 
 If you don't need classes to implement what you are writing -- if it would be implemented just as well just using raw functions -- then why in the world are you using classes?  Are you doing it because the programming language provided it and everybody's doing it?  Or was it truly demanded by the problem?
 
+#### See Also
+
+(added 2021-11-24:)
+
+Critiques of Object Oriented Programming:
+
+* [Brian Will - Object-Oriented Programming is Bad, 2016](https://www.youtube.com/watch?v=QM1iUe6IofM) -- In this video, I strongly agree with the critique of OOP abstraction; I disagree with the author's take on parameters & globals.
+* [Zed A. Shaw - The Web Will Die When OOP Dies (youtube video), 2015](https://youtu.be/_CEBG_s92P8?t=1043) -- "A way of writing software that is: Emperically based on usability, easily taught to beginners, still powerful and deep, fits within computation, has real world analogs."
+
 ### <a name="discipline-in-the-mind">Keep Strictures in the Mind, not in the Code</a>
 
 Often times, our programming languages introduce various mechanisms for enforcing strictures.
@@ -231,6 +243,22 @@ One of the sad things is that -- whenever somebody creates a new programming lan
 I think instead that what we need to do is create new mediums to express programs in, and then allow for a wealth of programming languages to be expressed from within that medium.
 
 And so this is what I mean when I say that I am focused on *notation* -- the system and conventions by which we express programs.
+
+
+## <a name="fixed">Fixed > Variable</a>
+
+(Added 2022-04-26)
+
+When you have a choice between fixing something, and making something variable, configurable, adjustible, ...
+
+Let the default thinking be: "Make it fixed."  The more things that vary, the more complex your program will be, and the more things that need to be tested.  Each configurable option is a cost.
+
+For example, suppose there is a configuration file of some sort, or a location of a directory.  Perhaps a root directory should be configurable, -- perhaps! (really: think it through!  each time!) -- but the directories beneath it probably can and should be fixed.  Unless there's a specific benefit to allowing the user to relocate specific directories, fix them in place.
+
+Things that are fixed in place are far easier to work with than things that vary, that move around.
+
+This principle is related to: ["Let Promises Do Their Work."](#promises)
+
 
 ## <a name="principles-small">Small Picture Principles</a>
 "Small Picture" principles are principles that have to do with, "OK, how do you write this specific bit of code?"
