@@ -1,6 +1,72 @@
 # LLM-Centered Architecture
 
-Lion Kimbro - 2025-03-22 - Composed with Chat-GPT
+Lion Kimbro - 2025-03-22 - Composed with ChatGPT, Mermaid diagrams via Claude 3.7 Sonnet Thinking.
+
+## Key Visualizations
+
+### 1. Core Architecture - Simple Overview
+
+```mermaid
+graph TD
+    User[👤 User]
+    LLM[🧠 LLM]
+    Body[⚙️ The Body]
+    World[🌐 External World]
+    
+    User <--"Natural language"--> Body
+    Body <--"Prompts & Context"--> LLM
+    LLM <--"Commands & Explanations"--> Body
+    Body <--"API calls/Actions"--> World
+    
+```
+
+### 2. Typical User Interaction Flow
+
+```mermaid
+sequenceDiagram
+    actor User as 👤 User
+    participant Body as ⚙️ Body
+    participant LLM as 🧠 LLM
+    participant Tools as 🛠️ Tools
+    
+    User->>Body: "Help me analyze this data"
+    Body->>LLM: Formats request + context
+    LLM->>Body: Requests tool access
+    Body->>User: "I need to use DataAnalyzer tool. OK?"
+    User->>Body: Approves
+    Body->>Tools: Activates DataAnalyzer
+    Tools->>Body: Returns results
+    Body->>LLM: Updates with results
+    LLM->>Body: Formatted analysis
+    Body->>User: "Here's what I found..."
+    
+    note over User,Tools: The LLM doesn't directly access tools or the user
+    note over Body: The Body mediates all interactions
+```
+
+### 3. System Growth Process
+
+```mermaid
+graph TD
+    Start[🌱 Minimal System]
+    Mid[🌿 Growing System]
+    End[🌳 Mature System]
+    
+    Start --> |"User requests capability"| A1[Add first tool]
+    A1 --> |"LLM proposes enhancement"| A2[Add UI improvement]
+    A2 --> |"User needs security"| A3[Add authorization layer]
+    A3 --> Mid
+    
+    Mid --> |"LLM suggests integration"| B1[Add external API]
+    B1 --> |"User requests automation"| B2[Add scheduled tasks]
+    B2 --> |"Performance needs"| B3[Optimize tool access]
+    B3 --> End
+    
+    
+    style Start fill:#ffe6cc,stroke:#d79b00
+    style Mid fill:#d5e8d4,stroke:#82b366  
+    style End fill:#dae8fc,stroke:#6c8ebf
+```
 
 ## Overview
 
@@ -34,6 +100,27 @@ The LLM interfaces with a suite of structured tools — predictable, modular act
 - Can also act directly on the system or its environment, outside the LLM's awareness
 - Engages in dialogue with the LLM to drive intent, review proposals, and approve or deny actions
 
+```mermaid
+graph TD
+    User[User] <--> Body[The Body]
+    Body <--> LLM[LLM Agent]
+    Body <--> World[The World/External Systems]
+    
+    subgraph "The Body"
+        Tools[Tools]
+        Shell[Shell/Environment Access]
+        Auth[Command Authorization]
+        Display[Display and Interface]
+    end
+    
+
+    
+    class User user
+    class LLM llm
+    class Body,Tools,Shell,Auth,Display body
+    class World world
+```
+
 ### 2. **LLM Agent**
 
 - Acts within the system as a reasoning, conversational agent
@@ -46,6 +133,27 @@ The LLM interfaces with a suite of structured tools — predictable, modular act
 ### 3. **The Body**
 
 The Body is the mechanical, rule-bound core of the system that mediates between the User, the LLM, and the outside World.
+
+```mermaid
+flowchart LR
+    User[User] -- "Natural language\ninput" --> Body
+    Body -- "Formatted prompt" --> LLM[LLM Agent]
+    LLM -- "Response with\ntool commands" --> Body
+    Body -- "Executes tools" --> World[External Systems]
+    World -- "Results" --> Body
+    Body -- "Updates context" --> LLM
+    Body -- "Natural language\nresponse" --> User
+    
+    classDef user fill:#f9f,stroke:#333
+    classDef llm fill:#bbf,stroke:#333
+    classDef body fill:#bfb,stroke:#333
+    classDef world fill:#fbb,stroke:#333
+    
+    class User user
+    class LLM llm
+    class Body body
+    class World world
+```
 
 #### a. **Tools**
 
@@ -65,6 +173,31 @@ The Body is the mechanical, rule-bound core of the system that mediates between 
 - LLM explains intent and the command being proposed
 - User may approve, reject, or request clarification
 - May optionally involve a second neutral agent for verifying commands
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant LLM
+    participant Body
+    participant World as External System
+    
+    User->>LLM: Request action
+    LLM->>Body: Command with dangerous operation
+    Body->>User: Request authorization
+    Note over Body,User: Shows command and explanation
+    
+    alt User approves
+        User->>Body: Approve command
+        Body->>World: Execute command
+        World->>Body: Return result
+        Body->>LLM: Update context
+        LLM->>User: Report outcome
+    else User rejects
+        User->>Body: Reject command
+        Body->>LLM: Command rejected
+        LLM->>User: Acknowledge & offer alternatives
+    end
+```
 
 #### d. **Display and Interface**
 
@@ -95,6 +228,36 @@ The Body Programmer:
 
 This role is one of **ongoing co-development**: as the LLM proposes changes, improvements, or new capabilities, the Body Programmer collaborates to implement or evolve the system accordingly.
 
+```mermaid
+graph TD
+    BP[Body Programmer] -->|Creates| Tools[Tools & APIs]
+    BP -->|Designs| UI[User Interface]
+    BP -->|Implements| Safety[Safety & Authorization]
+    BP -->|Maintains| IOStructure[I/O Structure]
+    
+    Tools --> Body[The Body]
+    UI --> Body
+    Safety --> Body
+    IOStructure --> Body
+    
+    Body <-->|Interacts with| LLM[LLM Agent]
+    User <-->|Uses| Body
+    Body <-->|Connects to| World[External Systems]
+    
+    BP <-->|Collaborates with| LLM
+    BP <-->|Responds to| User
+    
+    classDef programmer fill:#ffd,stroke:#333
+    classDef component fill:#bfb,stroke:#333
+    classDef agent fill:#bbf,stroke:#333
+    classDef external fill:#fbb,stroke:#333
+    
+    class BP programmer
+    class Tools,UI,Safety,IOStructure,Body component
+    class LLM,User agent
+    class World external
+```
+
 ## The Role of the LLM
 
 The LLM is not a hardcoded engine — it is a reasoning agent that operates within the system, responding to prompts, generating language, and guiding system behavior through natural dialog.
@@ -115,8 +278,6 @@ Its strength is not in execution, but in cognition, guidance, and articulation.
 
 ## Bootstrapping Process
 
-
-
 The LLM-centered architecture allows for a unique kind of system development: one where the LLM actively participates in the creation of its own environment.
 
 The system begins with a minimal Body — just enough to invoke the LLM and receive inputs and outputs.
@@ -127,9 +288,29 @@ New tools, interfaces, and safety layers are added incrementally, based on dialo
 
 Over time, the Body becomes more complex, guided by the LLM’s evolving sense of what it can do and what it needs.
 
+```mermaid
+sequenceDiagram
+    participant User
+    participant LLM
+    participant Body
+    participant Programmer
+    
+    Note over Body: Minimal initial functionality
+    
+    loop Iterative Development
+        User->>LLM: Request new capability
+        LLM->>User: Propose implementation
+        User->>Programmer: Approve changes
+        Programmer->>Body: Implement new tool/feature
+        Note over Body: Body capability expands
+        Body->>LLM: New tool available
+        LLM->>User: Demonstrate new capability
+    end
+    
+    Note over Body: Grows increasingly capable
+```
+
 This process emphasizes collaborative emergence: a program grown through interaction, rather than predefined all at once.
-
-
 
 ---
 
